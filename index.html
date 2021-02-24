@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Charles Vin</title>
+    <meta name="author" content="Charles Vin" />
+    <meta name="Resource-type" content="Document" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="home.css" />
+
+    <script type="text/javascript" src="home.js"></script>
+    <script src="https://kit.fontawesome.com/6bec3b5495.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header id="header">
+        <ul id="menu">
+            <!-- Button will appear here -->
+        </ul>
+        <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+            <!-- Some spans to act as a hamburger -->
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+
+        <ul id="responsiveMenu">
+            <!-- Button will appear here -->
+        </ul>
+    </header>
+
+    <div class='navButton'>
+        <i class="fas fa-chevron-circle-up arrowUp" onclick="autoScroll(-1)"></i>
+        <i class="fas fa-chevron-circle-down arrowDown" onclick="autoScroll(1)"></i>
+    </div>
+    <div class='root'>
+        <div class="section" id="Home">
+            <h1>Charles Vin</h1>
+            <!-- photo ppp -->
+            <!-- <img src="imgs/pp.png" alt="pp" /> -->
+            <h2>L2-MIASHS-SC</h2>
+        </div>
+        <div class="section" id="Presentation">
+            <div class="titre">
+                <h1>PRESENTATION</h1>
+            </div>
+            <div class='sectionText'>
+                <p>Etudiant en licence MIASHS, je suis passioné par les mathématiques et l'informatique.</p>
+                <p>Durant mon temps libre j'approfondie mes connaissances en informatique par de nombreux projets.</p>
+                <p>L'enseignement des Sciences-Cognitives me permet de voir au dela des applications usuelles de
+                    l'informatique en adaptant au maximum la machine à l'Homme.</p>
+            </div>
+
+        </div>
+        <div class="section" id="Projets">
+            <div class="titre">
+                <h1>Mes projets</h1>
+            </div>
+            <div class="sectionText">
+                <p><a href="/projects" class="button">Accéder à la page des projets !</a></p>
+            </div>
+        </div>
+        <div class="section" id="Contact">
+            <div class="titre">
+                <h1>Contact</h1>
+            </div>
+            <div class="sectionText" id="section3">
+                <div id="social">
+                    <div class="tooltip" onclick="copyToClipboard('0779495652' ,'1')">
+                        <span class="tooltiptext" id="myTooltip1">Copy to clipboard ? <br> 07-79-49-56-52</span>
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="tooltip">
+                        <span class="tooltiptext">@CharlesAttend</span>
+                        <a href="https://github.com/CharlesAttend" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                    <div class="tooltip" onclick="copyToClipboard('charles.vin.etu@univ-lille.fr', '')">
+                        <span class="tooltiptext" id="myTooltip">Copy to clipboard ? <br> charles.vin.etu@univ-lille.fr </span>
+                        <i class="fas fa-envelope-square"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

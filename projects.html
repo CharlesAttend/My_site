@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Charles Vin</title>
+    <meta name="author" content="Charles Vin" />
+    <meta name="Resource-type" content="Document" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="projects.css" />
+
+    <script type="text/javascript" src="projects.js"></script>
+    <script src="https://kit.fontawesome.com/6bec3b5495.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header id="header">
+        <ul id="menu">
+            <!-- Button will appear here -->
+        </ul>
+        <a id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+            <!-- Some spans to act as a hamburger -->
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+
+        <ul id="responsiveMenu">
+            <!-- Button will appear here -->
+        </ul>
+    </header>
+
+    <div class='navButton'>
+        <i class="fas fa-chevron-circle-up arrowUp" onclick="autoScroll(-1)"></i>
+        <i class="fas fa-chevron-circle-down arrowDown" onclick="autoScroll(1)"></i>
+    </div>
+    <div class='root'>
+
+        <div class="section" id="Home">
+            <div class="titre">
+                <h1>Mes projets</h1>
+                <p><a href="/" class="button">Retour à la page d'accueil</a></p>
+            </div>
+        </div>
+
+        <div class="section" id='MusicSync'>
+            <div class="titre">
+                <h1>MusicSync</h1>
+            </div>
+            <div class='sectionText'>
+                <h2>Téléchargement et synchronisation de playlist soundcloud et youtube.</h2>
+                <i>python, crontab, owncloud, webdav, youtubeDL</i>
+                <p><a href="https://django.charles.vin/musicsync" class="button">Accéder à l'interface</a></p>
+            </div>
+            <div class="story" id='hidden'>
+                <p>Ce projet fut le premier d'une grande lignée, grâce à lui je suis partie d'apprendre à lire une documentation jusqu'à déployer le projet sur un serveur Django pour lancer le téléchargement en asychrone sur mon serveur. En passant par l'utilisation de CronTab, apache2, ...</p>
+                <p>Tout à commencé avec une volonté d'automatisation en fin de 3ème. J'ai rapidement trouvé rébarbatif de télécharger mes playlists avec des sites remplis de pub et même payant la plus part du temps. Après quelque recherche, j'ai découvert le module youtubeDL et c'était partie ;) </p>
+            </div>
+            <div><p class="button storyButton">Voir l'histoire du projet ;)</p></div>
+        </div>
+
+        <div class="section" id='Todo'>
+            <div class="titre">
+                <h1>Todo</h1>
+            </div>
+            <div class='sectionText'>
+                <h2>Un site 3en1 pour mieux s’organiser.</h2>
+                <i>ReactJS, HTML, CSS, Django Rest </i>
+                <p><a href="#" class="button">Interface en construction</a></p>
+            </div>
+        </div>
+
+        <div class="section" id='RecipeChooser'>
+            <div class="titre">
+                <h1>Recipe Chooser</h1>
+            </div>
+            <div class='sectionText'>
+                <h2>Proposition de recettes à partir d’une liste d’ingrédients disponibles. Et autocomplétion des ingrédients durant la saisie.</h2>
+                <i>Python, Trie, Data cleaning</i>
+                <p><a href="https://github.com/CharlesAttend/Recipe-chooser" class="button">Le GitHub</a></p>
+            </div>
+            <div class="story" id='hidden'>
+                <p>Il me fallait un projet qui avait une appliquation concrète pour avoir des possibles ouvertures/améliorations. Le tout en respectant la consigne de base qui était de faire de l'autocomplétion avec une trie.  Et une vielle idée m'est revenu ! J'allais proposer des recettes à l'utilisateur !</p>
+                <p>Grâce à ce projet j'ai appris l'importance de nettoyer ces données ! En effet la database que j'ai utilisé comportait encore quelques ingrédients mal écrit </p>
+            </div>
+            <div><p class="button storyButton">Voir l'histoire du projet ;)</p></div>
+        </div>
+
+        <div class="section" id='Personalites'>
+            <div class="titre">
+                <h1>Etude de la répartition des personalités dans le monde</h1>
+            </div>
+            <div class='sectionText'>
+                <i>Kmeans, Jupyter, Pandas, MathPlotLib</i>
+                <p><a href="https://github.com/CharlesAttend/Personality-repartition-in-population" class="button">Le GitHub</a></p>
+            </div>
+            <div class="story" id='hidden'>
+                <p>Ce projet était dans le cadre de l'UE "Traitement de donnée". Il se basait sur une database Kaggle avec les résultats d'un questionnaire de personnalité.</p>
+                <p>J'avais envie de faire plus que la consigne de base. J'ai donc tenté de faire une analyse des résultats avec un algorythme Kmeans pour voir si on retrouvait bien les 5 groupes de personnalités du questionnaire ! N'hésitez pas à lire le rapport disponible dans le GitHub</p>
+            </div>
+            <div><p class="button storyButton">Voir l'histoire du projet ;)</p></div>
+        </div>
+
+        <div class="section" id='SmartMirror'>
+            <div class="titre">
+                <h1>Smart Mirror</h1>
+            </div>
+            <div class='sectionText'>
+                <h2>Un Smart mirror avec Google Assistant intégré.</h2>
+            </div>
+            <div class="story" id='hidden'>
+                <p>Un projet de longue date, grâce à lui j'ai eu ma première approche du JS, de NodeJS et de Npm</p>
+                <p>Il utilisait un RaspberryPi et <a href="https://magicmirror.builders/">ce module JS</a>. L'affichage utilisait un écran d'ordinateur portable qui était destiné à la déchéterie. Le but à terme était qu'il m'affiche ma ToDo, mon emploi du temps et qu'il s'allume le matin dès mon réveil. Maintenant l'écran est utilisé</p>
+            </div>
+            <div><p class="button storyButton">Voir l'histoire du projet ;)</p></div>
+        </div>
+
+        <div class="section" id='PortableSmartTV'>
+            <div class="titre">
+                <h1>Portable Smart TV</h1>
+            </div>
+            <div class='sectionText'>
+                <h2>Un écran, une box android et une batterie.</h2>
+            </div>
+            <div class="story" id='hidden'>
+                <p>Encore une fois, tout est partie d'un besoin. Ma mère m'a demandé une télé pour mettre dans la cuisine. Le Xiaomi MiStick venait de sortir et j'avais récément découvert l'USB-C Power Delivery pour alimenter le tout.</p>
+            </div>
+            <div><p class="button storyButton">Voir l'histoire du projet ;)</p></div>
+        </div>
+
+        <div class="section" id='Plante'>
+            <div class="titre">
+                <h1>Plante Connecté</h1>
+            </div>
+            <div class='sectionText'>
+                <h2>Arrosage automatique d’une plante avec un ESP</h2>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>
