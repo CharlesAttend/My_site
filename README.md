@@ -1,2 +1,3 @@
-# my_site
+# My_site
 My website
+I first really liked the javascript module FullPage.js. So I did the same by my self.
