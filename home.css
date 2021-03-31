@@ -39,6 +39,10 @@ h2 {
   flex-direction: column;
   vertical-align: middle;
 }
+.sectionText p{
+  padding-left: 9em;
+  padding-right: 9em;
+}
 
 .section:nth-child(1), #responsiveMenu li:nth-child(1){
   background-color: #f38181;
@@ -271,7 +275,12 @@ a:visited, a{
     /* color: #fff; */
     margin: 0;
     padding: 0;
-  }  
+  }
+
+  .sectionText p{
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
 
   #topnav_hamburger_icon {
     display    : block;
