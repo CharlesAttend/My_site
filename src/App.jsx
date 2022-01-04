@@ -1,22 +1,30 @@
+import React from "react";
+import {
+  Link
+} from "react-router-dom";
+
+import pp from './pp.jpg'
+import bg from './background.jpg'
+
 function App() {
   return (
     <div className="bg-white snap-both scroll-smooth">
-      <nav className="fixed lg:hidden text-lg w-full shadow-lg py-2 z-20">
+      {/* <nav className="fixed lg:hidden text-lg w-full shadow-lg py-2 z-20">
         <div class="flex justify-evenly items-center font-medium px-2">
           <div className="border-l-1 border-r-5 border-red-700">Accueil</div>
           <div className="border-l-1 border-r-5 border-red-700" onClick={}>Blog</div>
         </div>
-      </nav>
-      <LandingPage/>
-      <Presentation/>
-      <Projet/>
+      </nav> */}
+      <LandingPage />
+      <Presentation />
+      <Projet />
     </div>
   );
 }
 
 // bg-gradient-to-t from-gray-500 to-transparent bg-fixed"
 const LandingPage = () => (
-  <div className="flex flex-col justify-center text-center "> 
+  <div className="flex flex-col justify-center text-center"> 
     <h1>Charles Vin</h1>
     <h2>L3-MIASHS-SC</h2>
   </div>
@@ -25,7 +33,7 @@ const LandingPage = () => (
 const Presentation = () => (
   <div className="" id="presentation">
     <div className="bg-white p-1 border-l-4 border-bleu shadow-lg">
-      <img className="rounded-full" src="pp.jpg" alt="profile pic"/>
+      <img className="rounded-full" src={pp} alt="profile pic"/>
       <div class='sectionText'>
           <p>Étudiant en licence MIASHS, je suis passionné par les mathématiques et l'informatique.</p>
           <p>Durant mon temps libre j'approfondis mes connaissances en informatique par de nombreux projets.</p>
@@ -40,8 +48,15 @@ const Presentation = () => (
 )
 
 const Projet = () => (
+  // Carte qui défile (plus complexe à faire) ? + redirection vers le blog avec un bouton 
   <div className="flex flex-col items-center bg-white ">
+
+    <h1>Mes projets</h1>
     <a href='blog.html' className="border p-2 m-2 rounded-md">Acceder au blog</a>
+    <Link>Acceder au blog</Link>
+    
+    
+    
     <div className="grid grid-cols-3 gap-4 justify-center text-center">
       <div className="card">
         <img src="" alt="" className="" />
