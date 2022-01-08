@@ -1,9 +1,3 @@
-const markdownContext = require.context('./blogPosts', false, /\.md$/);
-
-
-
-
-// Let's get even more succint...
 const importAll = (r) => r.keys().map(r);
 const markdownFiles = importAll(require.context('./blogPosts', false, /\.md$/))
 
