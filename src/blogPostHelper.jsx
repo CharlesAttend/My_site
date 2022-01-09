@@ -12,7 +12,7 @@ export const getBlogPostTitle = (postsText) => (
         text.match(/<!-- (.*?) -->/)[1]
     ))
 )
-
+// IL FAUT CATCH L4ERREUR EN CAS DE TITRE MANQUANT
 
 
 // export const getBlogPostContent = (id) => 
