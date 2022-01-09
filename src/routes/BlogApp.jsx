@@ -5,23 +5,17 @@ import { getBlogPostText, getBlogPostTitle } from '../blogPostHelper';
 import removeComments from 'remark-remove-comments';
 import './github-markdown.css'
 
-const BlogApp = () => (
-	<div>
-		<ReactMarkdown># Hello, *world*!</ReactMarkdown>
-		<SideBar />
-	</div>
-)
-
-const SideBar = () => {
+const BlogApp = () => {
 	const [postsMap, setPostsMap] = useState(new Map())
 	const [postsTitleList, setPostsTitleList] = useState([])
+	const [selectedPostTitle, setSelectedPostTitle] = useState("")
 	
-    useEffect(() => {
+	useEffect(() => {
 		const getPost = async () => {
 			const postsText = await getBlogPostText()
 			const postsTitle = getBlogPostTitle(postsText)
 			setPostsTitleList(postsTitle)
-
+			setSelectedPostTitle(postsTitleList[0])
 			let l = []
 			for(let i=0; i<postsText.length; i++){
 				l.push([postsTitle[i], postsText[i]])
@@ -29,15 +23,27 @@ const SideBar = () => {
 			setPostsMap(new Map(l))
 		}
 		getPost();
-    }, []);
-	
+	}, []);
+
 	return (
-		postsTitleList.map( (title) => (
-			<div className='markdown-body'>
-				<ReactMarkdown children={postsMap.get(title)} remarkPlugins={removeComments}/>
-			</div>
-		))
+		<div>
+			<ReactMarkdown># Hello, *world*!</ReactMarkdown>
+			<SideBar postsTitleList={postsTitleList} />
+			<PostBody postsMap={postsMap} selectedPostTitle={selectedPostTitle} />
+		</div>
 	)
 }
+
+const SideBar = ({postsTitleList}) => (
+	postsTitleList.map( (title) => (
+		<div id={title}>{title}</div>
+	))
+)
+		
+const PostBody = ({postsMap, selectedPostTitle}) => (
+	<div className='markdown-body'>
+		<ReactMarkdown children={postsMap.get(selectedPostTitle)} remarkPlugins={removeComments}/>
+	</div>
+)
 
 export default BlogApp;
