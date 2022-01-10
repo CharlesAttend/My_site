@@ -15,10 +15,10 @@ const BlogApp = () => {
 		const getPost = async () => {
 			const postsText = await getBlogPostText()
 			const postsTitle = getBlogPostTitle(postsText)
-			let l = []
-			for(let i=0; i<postsText.length; i++){
-				l.push([postsTitle[i], postsText[i]])
-			}
+			const l = []
+			postsTitle.forEach((title, index) => {
+				l.push([title, postsText[index]])
+			});
 
 			setPostsTitleList(postsTitle)
 			setPostsMap(new Map(l))
@@ -38,7 +38,7 @@ const BlogApp = () => {
 const SideBar = ({postsTitleList}) => (
 	postsTitleList.map( (title) => (
 		<div className="flex">
-			<NavLink className={({ isActive }) => isActive ? "text-amber-600": ""} key={title} to={`/blog/${title}`}>{title}</NavLink>
+			<NavLink className={({ isActive }) => isActive ? "text-amber-600": ""} key={title} to={`/blog/${title.replaceAll(' ', '_').replaceAll('é', 'e')}`}>{title}</NavLink>
 		</div>
 	))
 )
