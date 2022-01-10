@@ -1,4 +1,3 @@
-// import { getBlogPostList } from "../blogPostHelper"
 import React, { useState, useEffect} from 'react';
 import ReactMarkdown from 'react-markdown';
 import { getBlogPostText, getBlogPostTitle } from './blogPostHelper';
@@ -44,10 +43,17 @@ const SideBar = ({postsTitleList}) => (
 )
 		
 const PostBody = ({postsMap}) => {
-	let params = useParams();
+	let paramTitle = useParams().title;
+	if(paramTitle === undefined){
+		paramTitle = '';
+	}
+	else {
+		paramTitle = paramTitle.replaceAll(' ', '_').replaceAll('é', 'e');
+	}
+	
 	return (
 	<div className='markdown-body'>
-		<ReactMarkdown children={postsMap.get(params.title.replaceAll(' ', '_').replaceAll('é', 'e'))} remarkPlugins={[removeComments]}/>
+		<ReactMarkdown children={postsMap.get(paramTitle)} remarkPlugins={[removeComments]}/>
 	</div>)
 }
 
