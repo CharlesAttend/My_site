@@ -12,7 +12,7 @@ const ParticlesParam = {
 					mode: "push",
 						},
 				onHover: {
-					enable: true,
+					enable: false,
 					mode: "repulse",
 						},
 				resize: true,
@@ -41,24 +41,24 @@ const ParticlesParam = {
 				color: "#7881d4",
 				distance: 150,
 				enable: true,
-				opacity: 0.5,
+				opacity: 0.05,
 				width: 1,
 				},
 			collisions: {
 				enable: true,
 				},
 			move: {
-				direction: "none",
+				direction: "right",
 				enable: true,
-				outMode: "bounce",
+				// outMode: "bounce",
 				random: false,
-				speed: 6,
+				speed: 1,
 				straight: false,
 				},
 			number: {
 				density: {
 					enable: true,
-					area: 800,
+					area: 1500,
 						},
 				value: 80,
 				},
