@@ -4,12 +4,13 @@ import ReactMarkdown from 'react-markdown';
 import { getBlogPostText, getBlogPostTitle } from '../blogPostHelper';
 import removeComments from 'remark-remove-comments';
 import './github-markdown.css'
+import { NavLink } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 const BlogApp = () => {
 	const [postsMap, setPostsMap] = useState(new Map())
 	const [postsTitleList, setPostsTitleList] = useState([])
-	const [selectedPostTitle, setSelectedPostTitle] = useState("")
-	
+
 	useEffect(() => {
 		const getPost = async () => {
 			const postsText = await getBlogPostText()
@@ -20,7 +21,6 @@ const BlogApp = () => {
 			}
 
 			setPostsTitleList(postsTitle)
-			setSelectedPostTitle(postsTitleList[0])
 			setPostsMap(new Map(l))
 		}
 		getPost();
@@ -30,21 +30,25 @@ const BlogApp = () => {
 		<div>
 			<ReactMarkdown># Hello, *world*!</ReactMarkdown>
 			<SideBar postsTitleList={postsTitleList} />
-			<PostBody postsMap={postsMap} selectedPostTitle={selectedPostTitle} />
+			<PostBody postsMap={postsMap}/>
 		</div>
 	)
 }
 
 const SideBar = ({postsTitleList}) => (
 	postsTitleList.map( (title) => (
-		<div id={title}>{title}</div>
+		<div className="flex">
+			<NavLink className={({ isActive }) => isActive ? "text-amber-600": ""} key={title} to={`/blog/${title}`}>{title}</NavLink>
+		</div>
 	))
 )
 		
-const PostBody = ({postsMap, selectedPostTitle}) => (
+const PostBody = ({postsMap}) => {
+	let params = useParams();
+	return (
 	<div className='markdown-body'>
-		<ReactMarkdown children={postsMap.get(selectedPostTitle)} remarkPlugins={[removeComments]}/>
-	</div>
-)
+		<ReactMarkdown children={postsMap.get(params.title)} remarkPlugins={[removeComments]}/>
+	</div>)
+}
 
 export default BlogApp;
