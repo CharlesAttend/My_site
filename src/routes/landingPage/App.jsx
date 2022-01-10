@@ -6,7 +6,7 @@ import {
 import pp from './pp.jpg'
 import bg from './background.jpg'
 
-function App() {
+const App = () => {
   return (
     <div className="bg-white snap-both scroll-smooth">
       {/* <nav className="fixed lg:hidden text-lg w-full shadow-lg py-2 z-20">
@@ -52,8 +52,7 @@ const Projet = () => (
   <div className="flex flex-col items-center bg-white ">
 
     <h1>Mes projets</h1>
-    <a href='blog.html' className="border p-2 m-2 rounded-md">Acceder au blog</a>
-    <Link>Acceder au blog</Link>
+    <Link to='/blog' className="border p-2 m-2 rounded-md" >Acceder au blog</Link>
     
     
     

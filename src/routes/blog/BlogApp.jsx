@@ -1,7 +1,7 @@
 // import { getBlogPostList } from "../blogPostHelper"
 import React, { useState, useEffect} from 'react';
 import ReactMarkdown from 'react-markdown';
-import { getBlogPostText, getBlogPostTitle } from '../blogPostHelper';
+import { getBlogPostText, getBlogPostTitle } from './blogPostHelper';
 import removeComments from 'remark-remove-comments';
 import './github-markdown.css'
 import { NavLink } from 'react-router-dom';
@@ -17,7 +17,7 @@ const BlogApp = () => {
 			const postsTitle = getBlogPostTitle(postsText)
 			const l = []
 			postsTitle.forEach((title, index) => {
-				l.push([title, postsText[index]])
+				l.push([title.replaceAll(' ', '_').replaceAll('é', 'e'), postsText[index]])
 			});
 
 			setPostsTitleList(postsTitle)
@@ -47,7 +47,7 @@ const PostBody = ({postsMap}) => {
 	let params = useParams();
 	return (
 	<div className='markdown-body'>
-		<ReactMarkdown children={postsMap.get(params.title)} remarkPlugins={[removeComments]}/>
+		<ReactMarkdown children={postsMap.get(params.title.replaceAll(' ', '_').replaceAll('é', 'e'))} remarkPlugins={[removeComments]}/>
 	</div>)
 }
 
