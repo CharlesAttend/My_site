@@ -11,7 +11,11 @@
     "react-markdown": "^7.1.1",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
+    "react-spring": "^9.4.1",
+    "react-tsparticles": "^1.39.0",
     "remark-remove-comments": "^0.2.0",
+    "tsparticles": "^1.39.0",
+    "tsparticles-preset-triangles": "^1.24.0",
     "web-vitals": "^2.1.2"
   },
   "scripts": {

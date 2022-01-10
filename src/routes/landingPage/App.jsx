@@ -2,13 +2,18 @@ import React from "react";
 import {
   Link
 } from "react-router-dom";
+import { useSpring, animated } from 'react-spring'
+import Particles from 'react-tsparticles';
+import { Main } from "tsparticles";
+import { loadTrianglesPreset } from "tsparticles-preset-triangles";
+import ParticlesParam from "./particlesParam";
 
 import pp from './pp.jpg'
 import bg from './background.jpg'
 
 const App = () => {
   return (
-    <div className="bg-white snap-both scroll-smooth">
+    <div className="bg-white">
       {/* <nav className="fixed lg:hidden text-lg w-full shadow-lg py-2 z-20">
         <div class="flex justify-evenly items-center font-medium px-2">
           <div className="border-l-1 border-r-5 border-red-700">Accueil</div>
@@ -23,21 +28,36 @@ const App = () => {
 }
 
 // bg-gradient-to-t from-gray-500 to-transparent bg-fixed"
-const LandingPage = () => (
-  <div className="flex flex-col justify-center text-center"> 
-    <h1>Charles Vin</h1>
-    <h2>L3-MIASHS-SC</h2>
-  </div>
+const LandingPage = () => {
+  // const h = document.querySelector('#landingPage').clientHeight;
+  const props = useSpring({ 
+    from: { y: "55vh" } ,
+    to: { y: "0vh" }, 
+    delay: 1000,
+    loop: true,
+  })
+  const customInit = (main: Main) => {
+    // this adds the preset to tsParticles, you can safely use the
+    loadTrianglesPreset(main);
+  }
+
+  return (
+    <div id="landingPage" className="flex flex-col justify-center text-center h-screen">
+      <Particles options={ParticlesParam} init={customInit} />
+      <animated.h1 style={props}>Charles Vin</animated.h1>
+      <animated.h2 style={props}>L3-MIASHS-SC</animated.h2>
+    </div>
 )
+}
 
 const Presentation = () => (
   <div className="" id="presentation">
     <div className="bg-white p-1 border-l-4 border-bleu shadow-lg">
-      <img className="rounded-full" src={pp} alt="profile pic"/>
+      <img className="rounded-full w-5" src={pp} alt="profile pic"/>
       <div class='sectionText'>
           <p>Étudiant en licence MIASHS, je suis passionné par les mathématiques et l'informatique.</p>
           <p>Durant mon temps libre j'approfondis mes connaissances en informatique par de nombreux projets.</p>
-          <p>L'enseignement des Sciences-Cognitives me permet de voir au dela des applications usuelles de
+          <p>L'enseignement des Sciences-Cognitives me permet de voir au delà des applications usuelles de
               l'informatique en adaptant au maximum la machine à l'Homme.</p>
           <p>Je fais de l'escalade et de la course à pied depuis plusieurs années. 
             Écologiste, j'ai déjà pratiqué la permaculture et essaye de limiter mon impact environnemental au quotidien. 
