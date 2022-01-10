@@ -8,8 +8,8 @@ import {
   Route
 } from "react-router-dom";
 
-import App from './App';
-import BlogApp from './routes/BlogApp';
+import App from './routes/landingPage/App';
+import BlogApp from './routes/blog/BlogApp';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,7 +17,7 @@ ReactDOM.render(
       <Routes>
         <Route path='/' element={ <App/> }/>
         <Route path='/blog' element={ <BlogApp/> }>
-          <Route path=":title" element={<BlogApp/>} />
+          <Route path=":title" element={ <BlogApp/>} />
         </Route>
         <Route path="*" element={<div class="p-5">There's nothing here!</div> }/>
       </Routes>
