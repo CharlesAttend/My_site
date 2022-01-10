@@ -17,7 +17,7 @@ ReactDOM.render(
       <Routes>
         <Route path='/' element={ <App/> }/>
         <Route path='/blog' element={ <BlogApp/> }>
-          <Route path=":title" element={ <BlogApp/>} />
+          <Route path=":title" element={ <BlogApp/> } />
         </Route>
         <Route path="*" element={<div class="p-5">There's nothing here!</div> }/>
       </Routes>
