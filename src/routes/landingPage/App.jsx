@@ -13,7 +13,7 @@ import bg from './background.jpg'
 
 const App = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-cwhite font-body">
       {/* <nav className="fixed lg:hidden text-lg w-full shadow-lg py-2 z-20">
         <div class="flex justify-evenly items-center font-medium px-2">
           <div className="border-l-1 border-r-5 border-red-700">Accueil</div>
@@ -42,10 +42,12 @@ const LandingPage = () => {
   }
 
   return (
-    <div id="landingPage" className="flex flex-col justify-center text-center h-screen">
+    <div id="landingPage" className="flex justify-center items-center h-screen">
       <Particles options={ParticlesParam} init={customInit} />
-      <animated.h1 style={props}>Charles Vin</animated.h1>
-      <animated.h2 style={props}>L3-MIASHS-SC</animated.h2>
+      <animated.div className="border-2 border-clightblue p-3 rounded-lg shadow-lg text-center backdrop-blur-lg" style={props}>
+        <h1 className="text-cblack text-3xl font-semibold" >Charles Vin</h1>
+        <h2 className="text-cblack">L3-MIASHS-SC</h2>
+      </animated.div>
     </div>
 )
 }
