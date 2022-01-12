@@ -3,10 +3,7 @@ import {
   Link
 } from "react-router-dom";
 import { useSpring, animated } from 'react-spring'
-import Particles from 'react-tsparticles';
-import { Main } from "tsparticles";
-import { loadTrianglesPreset } from "tsparticles-preset-triangles";
-import ParticlesParam from "./particlesParam";
+import ParticlesBackground from './ParticlesBackground'
 
 import pp from './pp.jpg'
 import bg from './background.jpg'
@@ -34,16 +31,12 @@ const LandingPage = () => {
     from: { y: "55vh" } ,
     to: { y: "0vh" }, 
     delay: 1000,
-    loop: true,
+    loop: false,
   })
-  const customInit = (main: Main) => {
-    // this adds the preset to tsParticles, you can safely use the
-    loadTrianglesPreset(main);
-  }
-
+  
   return (
     <div id="landingPage" className="flex justify-center items-center h-screen">
-      <Particles options={ParticlesParam} init={customInit} />
+      <ParticlesBackground/>
       <animated.div className="border-2 border-clightblue p-3 rounded-lg shadow-lg text-center backdrop-blur-lg" style={props}>
         <h1 className="text-cblack text-3xl font-semibold" >Charles Vin</h1>
         <h2 className="text-cblack">L3-MIASHS-SC</h2>
