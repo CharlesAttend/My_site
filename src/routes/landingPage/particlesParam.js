@@ -1,4 +1,5 @@
 const ParticlesParam = {
+		fullScreen: { enable: false, zIndex: 0},
 		background: {
 			color: {
 				// value: "#202124",
