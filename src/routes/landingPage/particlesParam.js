@@ -3,7 +3,8 @@ const ParticlesParam = {
 		background: {
 			color: {
 				// value: "#202124",
-				value: "#F4F9E9",
+				// value: "#F4F9E9",
+				value: "#FAFAFB",
 				},
 		},
 		fpsLimit: 60,
@@ -37,11 +38,13 @@ const ParticlesParam = {
 		},
 		particles: {
 			color: {
-				value: "#5B2A86",
+				value: "#872AB0",
+				// value: "#23024D",
 				// value: "#5B2A86",
 				},
 			links: {
-				color: "#5B2A86",
+				color: "#872AB0",
+				// color: "#23024D",
 				// color: "#5B2A86",
 				distance: 150,
 				enable: true,

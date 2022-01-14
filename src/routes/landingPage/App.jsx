@@ -37,29 +37,42 @@ const LandingPage = () => {
   return (
     <div id="landingPage" className="flex justify-center items-center h-screen">
       <ParticlesBackground/>
-      <animated.div className="border-2 border-clightblue p-3 rounded-lg shadow-lg text-center backdrop-blur-lg" style={props}>
-        <h1 className="text-cblack text-3xl font-semibold" >Charles Vin</h1>
-        <h2 className="text-cblack">L3-MIASHS-SC</h2>
+      <animated.div className="border border-cdpurple p-3 rounded-lg shadow-lg text-center backdrop-blur-lg" style={props}>
+        <h1 className="text-cdpurple text-5xl font-semibold" >Charles Vin</h1>
+        <h2 className="text-cdpurple">L3-MIASHS-SC</h2>
       </animated.div>
     </div>
 )
 }
 
 const Presentation = () => (
-  <div className="" id="presentation">
-    <div className="bg-white p-1 border-l-4 border-bleu shadow-lg">
-      <img className="rounded-full w-5" src={pp} alt="profile pic"/>
-      <div class='sectionText'>
-          <p>Étudiant en licence MIASHS, je suis passionné par les mathématiques et l'informatique.</p>
-          <p>Durant mon temps libre j'approfondis mes connaissances en informatique par de nombreux projets.</p>
-          <p>L'enseignement des Sciences-Cognitives me permet de voir au delà des applications usuelles de
-              l'informatique en adaptant au maximum la machine à l'Homme.</p>
-          <p>Je fais de l'escalade et de la course à pied depuis plusieurs années. 
-            Écologiste, j'ai déjà pratiqué la permaculture et essaye de limiter mon impact environnemental au quotidien. 
-            Je m’intéresse également aux cryptomonnaies et à la blockchain qui me semble être une innovation incroyable par son apport de décentralisation. </p>
+  <section className="bg-white h-screen">
+    <div className="m-5">
+      <div className="flex flex-col justify-center item-center bg-white p-3 shadow-xl">
+        <div className="text-cdpurple text-2xl text-center font-semibold">Présentation</div>
+        <div className='text-cgray text-lg text-center'>
+            <p className="m-1">Étudiant en licence MIASHS, je suis passionné par les mathématiques et l'informatique.</p>
+            <p className="m-1">L'enseignement des Sciences-Cognitives me permet de voir au delà des applications usuelles de l'informatique en adaptant au maximum la machine à l'Homme.</p>
+        </div>
+      </div>
+      <div className="flex flex-col justify-center item-center bg-white mt-10 p-3 shadow-xl">
+        <div className="text-cdpurple text-2xl text-center font-semibold">Centre d'intérêt</div>
+        <div className='text-cgray text-lg text-center'>
+            <p className="m-1">Durant mon temps libre j'approfondis mes connaissances en informatique par de nombreux projets.</p>
+            <p className="m-1">Je fais de l'escalade et de la course à pied depuis plusieurs années. 
+              Écologiste, j'ai déjà pratiqué la permaculture et essaye de limiter mon impact environnemental au quotidien. 
+              Je m'intéresse également aux cryptomonnaies et à la blockchain qui me semble être une innovation incroyable par son apport de décentralisation. </p>
+            {/* {["Escalade", "Course à pied" "Permaculture"].map(
+              (keyword, index) => (<div key={index}>{keyword}</div>))} */}
+              {/* Est ce que je met des keyword ?  */}
+        </div>
+      </div>
+
+      <div className="flex justify-center item-center">
+        <img className=" border border-cdpurple rounded-full w-60 m-5 shadow-xl" src={pp} alt="profile pic"/>
       </div>
     </div>
-  </div>
+  </section>
 )
 
 const Projet = () => (
