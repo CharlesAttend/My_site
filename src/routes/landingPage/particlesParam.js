@@ -67,10 +67,10 @@ const ParticlesParam = {
 					enable: true,
 					area: 1500,
 						},
-				value: 80,
+				value: 200,
 				},
 			opacity: {
-				value: 0.5,
+				value: 0.60,
 				},
 			shape: {
 				type: "circle",
