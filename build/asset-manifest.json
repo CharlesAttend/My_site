@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6f8caf59.css",
-    "main.js": "/static/js/main.3760a5a7.js",
+    "main.css": "/static/css/main.3fab9232.css",
+    "main.js": "/static/js/main.9586d315.js",
     "static/js/787.66f03ae4.chunk.js": "/static/js/787.66f03ae4.chunk.js",
     "static/media/pp.jpg": "/static/media/pp.ebaab878f47bd440cc18.jpg",
     "static/media/chili.jpg": "/static/media/chili.d9facda47d8799481722.jpg",
@@ -16,12 +16,12 @@
     "static/media/Smart Mirror.md": "/static/media/Smart Mirror.25ab3764e91cca39f332.md",
     "static/media/Portable Smart TV.md": "/static/media/Portable Smart TV.4daa81da799948ee7485.md",
     "static/media/Plante Connectée.md": "/static/media/Plante Connectée.0a07359d9b383126bb7e.md",
-    "main.6f8caf59.css.map": "/static/css/main.6f8caf59.css.map",
-    "main.3760a5a7.js.map": "/static/js/main.3760a5a7.js.map",
+    "main.3fab9232.css.map": "/static/css/main.3fab9232.css.map",
+    "main.9586d315.js.map": "/static/js/main.9586d315.js.map",
     "787.66f03ae4.chunk.js.map": "/static/js/787.66f03ae4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6f8caf59.css",
-    "static/js/main.3760a5a7.js"
+    "static/css/main.3fab9232.css",
+    "static/js/main.9586d315.js"
   ]
 }
