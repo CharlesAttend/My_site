@@ -111,11 +111,11 @@ const Presentation = () => {
 
 const Projet = () => (
   // Carte qui défile (plus complexe à faire) ? + redirection vers le blog avec un bouton 
-  <section className="bg-cdblue min-h-screen w-screen text-white p-5">
-    <div className="flex flex-col items-center justify-evenly">
-      <span className="text-4xl mb-7">Quelques projets</span>
+  <section className="bg-cdblue min-h-screen text-white box-border p-5">
+    <div className="flex flex-col items-center justify-evenly box-border">
+      <span className="text-4xl mb-7 box-border">Quelques projets</span>
       <CarouselComponent/>
-      <Link to='/blog' className=" border text-cdpurple p-2 m-2 rounded-md bg-white hover:bg-cpurple hover:text-white hover:border-cpurple" >Acceder au blog</Link>
+      <Link to='/blog' className=" box-border border text-cdpurple p-2 m-2 rounded-md bg-white hover:bg-cpurple hover:text-white hover:border-cpurple" >Acceder au blog</Link>
     </div>
   </section>
 )
