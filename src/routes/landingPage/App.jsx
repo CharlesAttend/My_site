@@ -92,30 +92,49 @@ const Projet = () => (
 
 const SocialLink = () => {
   return (<section className="h-screen bg-white">
-    <div className="flex flex-col items-center h-full justify-around">
+    <div className="flex flex-col items-center h-full justify-evenly">
       <h1 className="text-4xl">Contact</h1>
-      <div className="flex flex-col " >
-          <div className="" onclick="copyToClipboard('0779495652' ,'1')">
-            <i className="fas fa-mobile-alt"></i>
-            <span className="">Copy to clipboard ? 07-79-49-56-52</span>
+      <div className="flex flex-col w-10/12 " >
+          <div className="flex items-center justify-between m-3 " onClick={copyToClipboard('0779495652')}>
+            <i class='fas fa-clipboard-list '></i>
+            <span className="text-cgray text-lg">07-79-49-56-52</span>
+            <i className="fas fa-mobile-alt fa-5x text-cpurple text-center w-20"></i>
           </div>
-          <div className="">
-            <a href="https://github.com/CharlesAttend" title="GitHub" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i>
-            <span className="">@CharlesAttend</span>
-            </a>
+          <a href="https://github.com/CharlesAttend" title="GitHub" target="_blank" rel="noopener noreferrer">
+            <div className="flex items-center justify-between m-3">
+                <span className="text-cgray text-lg">@CharlesAttend</span>
+                <i className="fab fa-github fa-5x text-cpurple text-center w-20"></i>
+            </div>
+          </a>
+          <div className="flex items-center justify-between m-3" onClick={copyToClipboard('charles.vin@outlook.fr')}>
+            <i class='fas fa-clipboard-list '></i>
+            <span className="text-cgray text-lg">charles.vin@outlook.fr </span>
+            <i className="fas fa-envelope-square fa-5x text-cpurple text-center w-20"></i>
           </div>
-          <div className="" onclick="copyToClipboard('charles.vin.etu@univ-lille.fr', '')">
-            <i className="fas fa-envelope-square"></i>
-            <span className="">Copy to clipboard ? charles.vin.etu@univ-lille.fr </span>
-          </div>
-          <div className="">
-            <a href="https://www.linkedin.com/in/charles-vin/" title="LinkedIn" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
-            <span className="">Charles Vin</span>
-          </div>
+          <a href="https://www.linkedin.com/in/charles-vin/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <div className="flex items-center justify-between m-3">
+                <span className="text-cgray text-lg">Charles Vin</span>
+                <i className="fab fa-linkedin fa-5x text-cpurple text-center w-20"></i>
+            </div>
+          </a>
       </div>
     </div>
   </section>
   )
+}
+
+const copyToClipboard = (text) => {
+  navigator.clipboard.writeText(text).then(() => {
+      console.log('Copying to clipboard was successful!');
+      outFunc()
+  }, function (err) {
+      console.error('Could not copy text: ', err);
+  });
+}
+
+const outFunc = (s) => {
+  let tooltip = document.getElementById("myTooltip" + s);
+  tooltip.innerHTML = "Copied to clipboard! ";
 }
 
 export default App;
