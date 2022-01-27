@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react';
 import ReactMarkdown from 'react-markdown';
 import { getBlogPostText, getBlogPostTitle } from './blogPostHelper';
 import removeComments from 'remark-remove-comments';
-import './github-markdown.css'
+import './github-markdown-light.css'
 import { NavLink } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 
@@ -26,19 +26,22 @@ const BlogApp = () => {
 	}, []);
 
 	return (
-		<div>
-			<ReactMarkdown># Hello, *world*!</ReactMarkdown>
-			<SideBar postsTitleList={postsTitleList} />
-			<PostBody postsMap={postsMap}/>
+		<div className='grid grid-cols-6 h-screen'>
+			<ul className='list-inside list-disc col-span-1 flex flex-col justify-center pl-12 bg-cwhite text-cgray'>
+				<SideBar postsTitleList={postsTitleList} />
+			</ul>
+			<div className='col-span-5 m-10'>
+				<PostBody postsMap={postsMap}/>
+			</div>
 		</div>
 	)
 }
 
 const SideBar = ({postsTitleList}) => (
 	postsTitleList.map( (title) => (
-		<div className="flex">
-			<NavLink className={({ isActive }) => isActive ? "text-amber-600": ""} key={title} to={`/blog/${title.replaceAll(' ', '_').replaceAll('é', 'e')}`}>{title}</NavLink>
-		</div>
+		<li className="m-1">
+			<NavLink className={({ isActive }) => isActive ? "text-cpurple": ""} key={title} to={`/blog/${title.replaceAll(' ', '_').replaceAll('é', 'e')}`}>{title}</NavLink>
+		</li>
 	))
 )
 		

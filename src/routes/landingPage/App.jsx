@@ -123,7 +123,7 @@ const Projet = () => (
 const SocialLink = () => {
   return (<section className="h-screen bg-white">
     <div className="flex flex-col items-center h-full justify-evenly ">
-      <span className="text-4xl">Contact</span>
+      <span className="text-cdpurple text-4xl">Contact</span>
       <div className="w-10/12 lg:no-flex grid gap-5 grid-row-4 sm:gap-10 lg:grid-row-none lg:grid-cols-4  xl:gap-32 " >
           <div className="flex items-center justify-between  lg:flex-col-reverse lg:bg-gray-50 lg:p-6 lg:h-full">
             <div className="lg:flex flex-col-reverse items-center">
