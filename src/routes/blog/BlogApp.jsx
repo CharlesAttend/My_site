@@ -24,13 +24,32 @@ const BlogApp = () => {
 		}
 		getPost();
 	}, []);
+	
+	let paramTitle = useParams().title;
+	if(paramTitle === undefined){
+		return (
+			<div className='flex flex-col p-5 bg-cwhite h-screen'>
+				<span className='py-10 text-center text-4xl text-cpurple'>Blog</span>
+				<ul className='row-span-2 list-inside list-disc flex flex-col justify-center text-cgray'>
+					<SideBar postsTitleList={postsTitleList} />
+				</ul>
+			</div>
+		)
+	}
+	else {
+		return (
+			<div className='m-10'>
+				<PostBody postsMap={postsMap}/>
+			</div>
+		)
+	}
 
 	return (
 		<div className='grid grid-cols-6 h-screen'>
-			<ul className='list-inside list-disc col-span-1 flex flex-col justify-center pl-12 bg-cwhite text-cgray'>
+			<ul className='col-span-6 list-inside list-disc lg:col-span-1 flex flex-col justify-center lg:pl-12 bg-cwhite text-cgray'>
 				<SideBar postsTitleList={postsTitleList} />
 			</ul>
-			<div className='col-span-5 m-10'>
+			<div className='hidden col-span-5 m-10'>
 				<PostBody postsMap={postsMap}/>
 			</div>
 		</div>
@@ -49,15 +68,16 @@ const PostBody = ({postsMap}) => {
 	let paramTitle = useParams().title;
 	if(paramTitle === undefined){
 		paramTitle = '';
+		return <div></div>
 	}
 	else {
 		paramTitle = paramTitle.replaceAll(' ', '_').replaceAll('é', 'e');
+		return (
+		<div className='markdown-body'>
+			<ReactMarkdown children={postsMap.get(paramTitle)} remarkPlugins={[removeComments]}/>
+		</div>)
 	}
 	
-	return (
-	<div className='markdown-body'>
-		<ReactMarkdown children={postsMap.get(paramTitle)} remarkPlugins={[removeComments]}/>
-	</div>)
 }
 
 export default BlogApp;
