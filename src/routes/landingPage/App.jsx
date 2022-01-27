@@ -74,7 +74,7 @@ const Presentation = () => {
         {({isVisible}) =>{
           if(isVisible){
             start1({opacity: 1, transform: 'translateX(0px)',})
-            start2({opacity: 1, delay: 500, transform: 'translateX(0px)'})
+            start2({opacity: 1, delay: 1000, transform: 'translateX(0px)'})
             setActive(false)
           }
           return (<div className="grid-cols-3 gap-4 lg:grid">
