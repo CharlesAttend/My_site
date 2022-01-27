@@ -12,7 +12,7 @@ import pp from './img/pp.jpg'
 
 const App = () => {
   return (
-    <div className="bg-white font-body">
+    <div className="bg-white font-body box-border">
       {/* <nav className="fixed lg:hidden text-lg w-full shadow-lg py-2 z-20">
         <div className="flex justify-evenly items-center font-medium px-2">
           <div className="border-l-1 border-r-5 border-red-700">Accueil</div>
@@ -88,8 +88,8 @@ const Presentation = () => (
 
 const Projet = () => (
   // Carte qui défile (plus complexe à faire) ? + redirection vers le blog avec un bouton 
-  <section className="bg-cdblue h-screen w-screen text-white ">
-    <div className="flex flex-col items-center h-full justify-evenly">
+  <section className="bg-cdblue min-h-screen w-screen text-white p-5">
+    <div className="flex flex-col items-center justify-evenly">
       <span className="text-4xl mb-7">Quelques projets</span>
       <CarouselComponent/>
       <Link to='/blog' className=" border text-cdpurple p-2 m-2 rounded-md bg-white hover:bg-cpurple hover:text-white hover:border-cpurple" >Acceder au blog</Link>
