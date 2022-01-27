@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ed49e93d.css",
+    "main.js": "/static/js/main.ce7350c3.js",
+    "static/js/787.66f03ae4.chunk.js": "/static/js/787.66f03ae4.chunk.js",
+    "static/media/pp.jpg": "/static/media/pp.ebaab878f47bd440cc18.jpg",
+    "static/media/monte-carlo-pi.png": "/static/media/monte-carlo-pi.6fa2e4ce08887d39819b.png",
+    "static/media/cloud-download-alt-solid.svg": "/static/media/cloud-download-alt-solid.0e514aebca20206530d95c9eeefdd00f.svg",
+    "index.html": "/index.html",
+    "static/media/MusicSync.md": "/static/media/MusicSync.00220301833683524cdb.md",
+    "static/media/Recipe Chooser.md": "/static/media/Recipe Chooser.18ba6a345f4f1e5c2737.md",
+    "static/media/Personnalités.md": "/static/media/Personnalités.2c576d116b90595e720e.md",
+    "static/media/Smart Mirror.md": "/static/media/Smart Mirror.25ab3764e91cca39f332.md",
+    "static/media/Portable Smart TV.md": "/static/media/Portable Smart TV.4daa81da799948ee7485.md",
+    "static/media/Plante Connectée.md": "/static/media/Plante Connectée.0a07359d9b383126bb7e.md",
+    "main.ed49e93d.css.map": "/static/css/main.ed49e93d.css.map",
+    "main.ce7350c3.js.map": "/static/js/main.ce7350c3.js.map",
+    "787.66f03ae4.chunk.js.map": "/static/js/787.66f03ae4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed49e93d.css",
+    "static/js/main.ce7350c3.js"
+  ]
+}
