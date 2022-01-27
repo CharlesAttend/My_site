@@ -96,8 +96,10 @@ const SocialLink = () => {
       <h1 className="text-4xl">Contact</h1>
       <div className="flex flex-col w-10/12 " >
           <div className="flex items-center justify-between m-3 " onClick={copyToClipboard('0779495652')}>
-            <i class='fas fa-clipboard-list '></i>
-            <span className="text-cgray text-lg">07-79-49-56-52</span>
+            <div className="">
+              <span className="text-cgray text-lg">07-79-49-56-52</span>
+              <i class='fas fa-clipboard-list fa-lg border-2 rounded-lg p-2 m-1 text-cgray'></i>
+            </div>
             <i className="fas fa-mobile-alt fa-5x text-cpurple text-center w-20"></i>
           </div>
           <a href="https://github.com/CharlesAttend" title="GitHub" target="_blank" rel="noopener noreferrer">
@@ -107,8 +109,10 @@ const SocialLink = () => {
             </div>
           </a>
           <div className="flex items-center justify-between m-3" onClick={copyToClipboard('charles.vin@outlook.fr')}>
-            <i class='fas fa-clipboard-list '></i>
-            <span className="text-cgray text-lg">charles.vin@outlook.fr </span>
+            <div className="">
+              <span className="text-cgray text-lg">charles.vin@outlook.fr </span>
+              <i class='fas fa-clipboard-list fa-lg border-2 rounded-lg p-2 m-1 text-cgray'></i>
+            </div>
             <i className="fas fa-envelope-square fa-5x text-cpurple text-center w-20"></i>
           </div>
           <a href="https://www.linkedin.com/in/charles-vin/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
