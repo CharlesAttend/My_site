@@ -33,7 +33,7 @@ const LandingPage = () => {
   const props = useSpring({ 
     from: { y: "55vh" } ,
     to: { y: "0vh" }, 
-    delay: 2000,
+    delay: 1000,
     loop: false,
     config: config.gentle,
   })
@@ -53,22 +53,28 @@ const Presentation = () => {
   const [active, setActive] = useState(true)
 
   const [props1, start1] = useSpring(() => ({
-    x: "100vw",
+    from: { 
+      opacity: 0,
+      transform: 'translateX(-250px)'
+    },
     config: config.gentle, 
   }))
 
   const [props2, start2] = useSpring(() => ({
-    x: "100vw",
+    from: { 
+      opacity: 0,
+      transform: 'translateX(-250px)'
+    },
     config: config.gentle,
   }))
 
   return (<section className="bg-white">
     <div className="m-5">
-      <ReactVisibilitySensor active={active}>
+      <ReactVisibilitySensor active={active} partialVisibility="top" minTopValue={100}>
         {({isVisible}) =>{
           if(isVisible){
-            start1({from: { x: "100vw" }, to: { x: "0vw" }})
-            start2({from: { x: "100vw" }, to: { x: "0vw"}, delay: 500})
+            start1({opacity: 1, transform: 'translateX(0px)',})
+            start2({opacity: 1, delay: 500, transform: 'translateX(0px)'})
             setActive(false)
           }
           return (<div className="grid-cols-3 gap-4 lg:grid">
