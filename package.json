@@ -14,6 +14,7 @@
     "react-scripts": "5.0.0",
     "react-spring": "^9.4.1",
     "react-tsparticles": "^1.39.0",
+    "react-visibility-sensor": "^5.1.1",
     "remark-remove-comments": "^0.2.0",
     "tsparticles": "^1.39.0",
     "tsparticles-preset-triangles": "^1.24.0",
