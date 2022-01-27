@@ -26,42 +26,44 @@ const BlogApp = () => {
 	}, []);
 	
 	let paramTitle = useParams().title;
-	if(paramTitle === undefined){
-		return (
-			<div className='flex flex-col p-5 bg-cwhite h-screen'>
-				<span className='py-10 text-center text-4xl text-cpurple'>Blog</span>
-				<ul className='row-span-2 list-inside list-disc flex flex-col justify-center text-cgray'>
-					<SideBar postsTitleList={postsTitleList} />
-				</ul>
-			</div>
-		)
-	}
-	else {
-		return (
-			<div className='m-10'>
-				<PostBody postsMap={postsMap}/>
-			</div>
-		)
-	}
+	// if(paramTitle === undefined){
+	// 	return (
+	// 		<div className='flex flex-col p-5 bg-cwhite h-screen'>
+	// 			<span className='py-10 text-center text-4xl text-cpurple'>Blog</span>
+	// 			<ul className='row-span-2 list-inside list-disc flex flex-col justify-center text-cgray'>
+	// 				<SideBar postsTitleList={postsTitleList} />
+	// 			</ul>
+	// 		</div>
+	// 	)
+	// }
+	// else {
+	// 	return (
+	// 		<div className='m-10'>
+	// 			<PostBody postsMap={postsMap}/>
+	// 		</div>
+	// 	)
+	// }
 
 	return (
-		<div className='grid grid-cols-6 h-screen'>
-			<ul className='col-span-6 list-inside list-disc lg:col-span-1 flex flex-col justify-center lg:pl-12 bg-cwhite text-cgray'>
-				<SideBar postsTitleList={postsTitleList} />
-			</ul>
-			<div className='hidden col-span-5 m-10'>
-				<PostBody postsMap={postsMap}/>
-			</div>
+		<div className='lg:grid lg:grid-cols-6 lg:h-screen'>
+			<div className={paramTitle ? 'hidden lg:block lg:col-span-1' : ''}><SideBar postsTitleList={postsTitleList} /></div>
+			<div className={paramTitle ? 'lg:col-span-5' : 'hidden lg:block '}><PostBody postsMap={postsMap} /></div>
 		</div>
 	)
+
 }
 
 const SideBar = ({postsTitleList}) => (
-	postsTitleList.map( (title) => (
-		<li className="m-1">
-			<NavLink className={({ isActive }) => isActive ? "text-cpurple": ""} key={title} to={`/blog/${title.replaceAll(' ', '_').replaceAll('é', 'e')}`}>{title}</NavLink>
-		</li>
-	))
+	<div className='flex flex-col p-5 bg-cwhite h-screen'>
+		<span className='py-10 text-center text-4xl text-cpurple'>Blog</span>
+		<ul className='row-span-2 lg:col-span-6 lg:pl-12 list-inside list-disc flex flex-col justify-center text-cgray'>
+			{postsTitleList.map( (title) => (
+				<li className="m-1">
+					<NavLink className={({ isActive }) => isActive ? "text-cpurple": ""} key={title} to={`/blog/${title.replaceAll(' ', '_').replaceAll('é', 'e')}`}>{title}</NavLink>
+				</li>
+			))}
+		</ul>
+	</div>
 )
 		
 const PostBody = ({postsMap}) => {
@@ -73,9 +75,12 @@ const PostBody = ({postsMap}) => {
 	else {
 		paramTitle = paramTitle.replaceAll(' ', '_').replaceAll('é', 'e');
 		return (
-		<div className='markdown-body'>
-			<ReactMarkdown children={postsMap.get(paramTitle)} remarkPlugins={[removeComments]}/>
-		</div>)
+			<div className='m-10'>
+				<div className='markdown-body'>
+					<ReactMarkdown children={postsMap.get(paramTitle)} remarkPlugins={[removeComments]} />
+				</div>
+			</div>
+		)
 	}
 	
 }
