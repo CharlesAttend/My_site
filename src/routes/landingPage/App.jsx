@@ -33,7 +33,7 @@ const LandingPage = () => {
   const props = useSpring({ 
     from: { y: "55vh" } ,
     to: { y: "0vh" }, 
-    delay: 2000,
+    delay: 1000,
     loop: false,
     config: config.gentle,
   })
@@ -53,22 +53,28 @@ const Presentation = () => {
   const [active, setActive] = useState(true)
 
   const [props1, start1] = useSpring(() => ({
-    x: "100vw",
+    from: { 
+      opacity: 0,
+      transform: 'translateX(-250px)'
+    },
     config: config.gentle, 
   }))
 
   const [props2, start2] = useSpring(() => ({
-    x: "100vw",
+    from: { 
+      opacity: 0,
+      transform: 'translateX(-250px)'
+    },
     config: config.gentle,
   }))
 
   return (<section className="bg-white">
     <div className="m-5">
-      <ReactVisibilitySensor active={active}>
+      <ReactVisibilitySensor active={active} partialVisibility="top" minTopValue={100}>
         {({isVisible}) =>{
           if(isVisible){
-            start1({from: { x: "100vw" }, to: { x: "0vw" }})
-            start2({from: { x: "100vw" }, to: { x: "0vw"}, delay: 500})
+            start1({opacity: 1, transform: 'translateX(0px)',})
+            start2({opacity: 1, delay: 1000, transform: 'translateX(0px)'})
             setActive(false)
           }
           return (<div className="grid-cols-3 gap-4 lg:grid">
@@ -111,11 +117,11 @@ const Presentation = () => {
 
 const Projet = () => (
   // Carte qui défile (plus complexe à faire) ? + redirection vers le blog avec un bouton 
-  <section className="bg-cdblue min-h-screen w-screen text-white p-5">
-    <div className="flex flex-col items-center justify-evenly">
-      <span className="text-4xl mb-7">Quelques projets</span>
+  <section className="bg-cdblue min-h-screen text-white box-border p-5">
+    <div className="flex flex-col items-center justify-evenly box-border">
+      <span className="text-4xl mb-7 box-border">Quelques projets</span>
       <CarouselComponent/>
-      <Link to='/blog' className=" border text-cdpurple p-2 m-2 rounded-md bg-white hover:bg-cpurple hover:text-white hover:border-cpurple" >Acceder au blog</Link>
+      <Link to='/blog' className=" box-border border text-cdpurple p-2 m-2 rounded-md bg-white hover:bg-cpurple hover:text-white hover:border-cpurple" >Acceder au blog</Link>
     </div>
   </section>
 )
