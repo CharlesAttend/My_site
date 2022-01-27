@@ -67,7 +67,7 @@ const ParticlesParam = {
 					enable: true,
 					area: 1500,
 						},
-				value: 200,
+				value: 100,
 				},
 			opacity: {
 				value: 0.60,
