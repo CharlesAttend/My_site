@@ -21,7 +21,7 @@ const CarouselComponent = () => {
 						{['Python', 'Crontab', 'Owncloud', 'Webdav', 'YoutubeDL'].map(
 							(keyword, index) => <div className="border rounded-lg m-1 p-1 whitespace-nowrap" key={index}>{keyword}</div>)}
 					</div>
-					<p><a href="https://django.charles.vin/musicsync" class="border border-cpurple p-2 m-2 rounded-md hover:bg-cpurple hover:text-white">Accéder à l'interface</a></p>
+					<p><a href="https://django.charles.vin/musicsync" class="border border-cpurple p-2 m-2 rounded-md hover:bg-cpurple hover:text-white" target="_blank" rel="noopener noreferrer">Accéder à l'interface</a></p>
 				</div>
 			</div>
 
@@ -33,7 +33,7 @@ const CarouselComponent = () => {
 						{['JavaScript', 'Html', 'Css', 'Mathématiques'].map(
 							(keyword, index) => <div className="border rounded-lg m-1 p-1 whitespace-nowrap" key={index}>{keyword}</div>)}
 					</div>
-					<p><a href="https://charlesattend.github.io/Monte-Carlo-pi-estimation-visualization/" class="border border-cpurple p-2 m-2 rounded-md hover:bg-cpurple hover:text-white">Accéder à l'interface</a></p>
+					<p><a href="https://charlesattend.github.io/Monte-Carlo-pi-estimation-visualization/" class="border border-cpurple p-2 m-2 rounded-md hover:bg-cpurple hover:text-white" target="_blank" rel="noopener noreferrer">Accéder à l'interface</a></p>
 				</div>
 			</div>
 
@@ -46,7 +46,7 @@ const CarouselComponent = () => {
 						{['Python', 'Trie', 'Data Cleaning'].map(
 							(keyword, index) => <div className="border rounded-lg m-1 p-1 whitespace-nowrap" key={index}>{keyword}</div>)}
 					</div>
-					<p><a href="https://github.com/CharlesAttend/Recipe-chooser" class="border p-2 m-2 rounded-md hover:bg-cpurple hover:text-white">Accéder au dépos GitHub</a></p>
+					<p><a href="https://github.com/CharlesAttend/Recipe-chooser" class="border p-2 m-2 rounded-md hover:bg-cpurple hover:text-white" target="_blank" rel="noopener noreferrer">Accéder au dépos GitHub</a></p>
 				</div>
 			</div>
 		</Carousel>
