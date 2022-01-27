@@ -13,7 +13,7 @@ const CarouselComponent = () => {
         { width: 1024, itemsToShow: 3 },
 	];
 	return (
-		<Carousel className='text-cgray' breakPoints={breakpoint} itemPadding={[10]}>
+		<Carousel className='text-cgray px-3 sm:px-6 md:px-12 lg:px-20' breakPoints={breakpoint} itemPadding={[10]}>
 
 			<div className="bg-white flex-grow p-3 rounded-lg flex flex-col items-center">
 				<CloudLogo className="text-cdpurple w-2/4 pb-2" />
