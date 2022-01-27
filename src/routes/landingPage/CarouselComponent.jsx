@@ -1,5 +1,6 @@
 import Carousel from 'react-elastic-carousel';
 import { ReactComponent as CloudLogo } from './img/cloud-download-alt-solid.svg'
+import {Link} from "react-router-dom"
 import monte_carlo_pi from './img/monte-carlo-pi.png'
 import RL from './img/RL.png'
 import chili from './img/chili.jpg'
@@ -23,10 +24,9 @@ const CarouselComponent = () => {
 						{['Python', 'Crontab', 'Owncloud', 'Webdav', 'YoutubeDL'].map(
 							(keyword, index) => <div className="border rounded-lg m-1 p-1 whitespace-nowrap" key={index}>{keyword}</div>)}
 					</div>
-					<a href="https://django.charles.vin/musicsync" class="border border-cpurple p-2 m-2 rounded-md hover:bg-cpurple hover:text-white" target="_blank" rel="noopener noreferrer">Accéder à l'interface</a>
+					<a href="https://django.charles.vin/musicsync" class="border text-cdpurple border-cpurple p-2 m-2 rounded-md hover:bg-cpurple hover:text-white" target="_blank" rel="noopener noreferrer">Accéder à l'interface</a>
 				</div>
 			</div>
-
 			<div className="bg-white flex-grow p-3 rounded-lg flex flex-col items-center">
 				<img src={RL} alt="The web project" className="pb-2" />
 				<div className="text-cdpurple text-2xl text-center">Apprentissage par renforcement</div>
@@ -36,7 +36,7 @@ const CarouselComponent = () => {
 						{['RL', 'Tensorflow', 'POMDP'].map(
 							(keyword, index) => <div className="border rounded-lg m-1 p-1 whitespace-nowrap" key={index}>{keyword}</div>)}
 					</div>
-					<span class="border border-cpurple p-2 m-2 rounded-md hover:bg-cpurple hover:text-white">Voir l'article du blog</span>
+					<Link to='/blog/Apprentissage_par_renforcement' class="border text-cdpurple border-cpurple p-2 m-2 rounded-md hover:bg-cpurple hover:text-white">Voir l'article du blog</Link>
 				</div>
 			</div>
 
@@ -48,7 +48,7 @@ const CarouselComponent = () => {
 						{['JavaScript', 'Html', 'Css', 'Mathématiques'].map(
 							(keyword, index) => <div className="border rounded-lg m-1 p-1 whitespace-nowrap" key={index}>{keyword}</div>)}
 					</div>
-					<a href="https://charlesattend.github.io/Monte-Carlo-pi-estimation-visualization/" class="border border-cpurple p-2 m-2 rounded-md hover:bg-cpurple hover:text-white" target="_blank" rel="noopener noreferrer">Accéder à l'interface</a>
+					<a href="https://charlesattend.github.io/Monte-Carlo-pi-estimation-visualization/" class="border text-cdpurple border-cpurple p-2 m-2 rounded-md hover:bg-cpurple hover:text-white" target="_blank" rel="noopener noreferrer">Accéder à l'interface</a>
 				</div>
 			</div>
 
@@ -61,7 +61,7 @@ const CarouselComponent = () => {
 						{['Python', 'Trie', 'Data Cleaning'].map(
 							(keyword, index) => <div className="border rounded-lg m-1 p-1 whitespace-nowrap" key={index}>{keyword}</div>)}
 					</div>
-					<a href="https://github.com/CharlesAttend/Recipe-chooser" class="border p-2 m-2 rounded-md hover:bg-cpurple hover:text-white" target="_blank" rel="noopener noreferrer">Accéder au dépôt GitHub</a>
+					<a href="https://github.com/CharlesAttend/Recipe-chooser" class="border p-2 m-2 text-cdpurple rounded-md hover:bg-cpurple hover:text-white" target="_blank" rel="noopener noreferrer">Accéder au dépôt GitHub</a>
 				</div>
 			</div>
 
