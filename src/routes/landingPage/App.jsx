@@ -22,6 +22,7 @@ const App = () => {
       <LandingPage />
       <Presentation />
       <Projet />
+      <SocialLink />
     </div>
   );
 }
@@ -80,16 +81,40 @@ const Presentation = () => (
 
 const Projet = () => (
   // Carte qui défile (plus complexe à faire) ? + redirection vers le blog avec un bouton 
-  <section className="bg-cdblue h-screen w-screen text-white">
-    <div className="flex flex-col items-center h-full">
-      <h1 className="text-4xl">Quelques projets</h1>
-      <div className="flex flex-col items-center justify-evenly pt-7">
-        <CarouselComponent/>
-        <div className="">
-        </div>
-        <Link to='/blog' className="border text-cdpurple p-2 m-2 rounded-md bg-white hover:bg-cpurple hover:text-white hover:border-cpurple" >Acceder au blog</Link>
+  <section className="bg-cdblue h-screen w-screen text-white ">
+    <div className="flex flex-col items-center h-full justify-around">
+      <h1 className="text-4xl mb-7">Quelques projets</h1>
+      <CarouselComponent/>
+      <Link to='/blog' className=" border text-cdpurple p-2 m-2 rounded-md bg-white hover:bg-cpurple hover:text-white hover:border-cpurple" >Acceder au blog</Link>
+    </div>
+  </section>
+)
+
+const SocialLink = () => (
+  <section className="h-screen bg-white">
+    <div className="flex flex-col items-center h-full justify-around">
+      <h1 className="text-4xl">Contact</h1>
+      <div className="flex flex-col " >
+          <div className="" onclick="copyToClipboard('0779495652' ,'1')">
+            <i className="fas fa-mobile-alt"></i>
+            <span className="">Copy to clipboard ? 07-79-49-56-52</span>
+          </div>
+          <div className="">
+            <a  title="GitHub"><i className="fab fa-github"></i>
+            <span className="">@CharlesAttend</span>
+            </a>
+          </div>
+          <div className="" onclick="copyToClipboard('charles.vin.etu@univ-lille.fr', '')">
+            <i className="fas fa-envelope-square"></i>
+            <span className="">Copy to clipboard ? charles.vin.etu@univ-lille.fr </span>
+          </div>
+          <div className="">
+            <a href="https://www.linkedin.com/in/charles-vin/" title="LinkedIn"><i className="fab fa-linkedin"></i></a>
+            <span className="">Charles Vin</span>
+          </div>
       </div>
     </div>
   </section>
 )
+
 export default App;
