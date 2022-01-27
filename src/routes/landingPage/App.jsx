@@ -51,11 +51,11 @@ const LandingPage = () => {
 const Presentation = () => (
   <section className="bg-white">
     <div className="m-5">
-      <div className="lg:grid grid-cols-3 gap-4">
+      <div className="grid-cols-3 gap-4 lg:grid">
 
-        <div className="lg:col-span-2 lg:flex-row flex flex-col justify-center item-center bg-white p-3 shadow-xl">
-          <div className="flex justify-center item-center">
-            <img className="border border-cdpurple rounded-full  m-5 shadow-xl max-w-xs" src={pp} alt="profile pic" />
+        <div className="flex flex-col justify-center item-center lg:col-span-2 lg:flex-row bg-white p-3 shadow-xl">
+          <div className="flex justify-center item-center lg:flex-col">
+            <img className="border border-cdpurple rounded-full m-5 shadow-xl max-w-xs max-h-80" src={pp} alt="profile pic" />
           </div>
           <div className="flex flex-col justify-center">
             <div className="text-cdpurple text-2xl text-center font-semibold">Présentation</div>
