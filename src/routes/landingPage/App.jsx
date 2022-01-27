@@ -90,8 +90,8 @@ const Projet = () => (
   </section>
 )
 
-const SocialLink = () => (
-  <section className="h-screen bg-white">
+const SocialLink = () => {
+  return (<section className="h-screen bg-white">
     <div className="flex flex-col items-center h-full justify-around">
       <h1 className="text-4xl">Contact</h1>
       <div className="flex flex-col " >
@@ -100,7 +100,7 @@ const SocialLink = () => (
             <span className="">Copy to clipboard ? 07-79-49-56-52</span>
           </div>
           <div className="">
-            <a  title="GitHub"><i className="fab fa-github"></i>
+            <a href="https://github.com/CharlesAttend" title="GitHub" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i>
             <span className="">@CharlesAttend</span>
             </a>
           </div>
@@ -109,12 +109,13 @@ const SocialLink = () => (
             <span className="">Copy to clipboard ? charles.vin.etu@univ-lille.fr </span>
           </div>
           <div className="">
-            <a href="https://www.linkedin.com/in/charles-vin/" title="LinkedIn"><i className="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/charles-vin/" title="LinkedIn" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
             <span className="">Charles Vin</span>
           </div>
       </div>
     </div>
   </section>
-)
+  )
+}
 
 export default App;
