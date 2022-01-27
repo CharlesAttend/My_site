@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div className="bg-white font-body">
       {/* <nav className="fixed lg:hidden text-lg w-full shadow-lg py-2 z-20">
-        <div class="flex justify-evenly items-center font-medium px-2">
+        <div className="flex justify-evenly items-center font-medium px-2">
           <div className="border-l-1 border-r-5 border-red-700">Accueil</div>
           <div className="border-l-1 border-r-5 border-red-700" onClick={}>Blog</div>
         </div>
