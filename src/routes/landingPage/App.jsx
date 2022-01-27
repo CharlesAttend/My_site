@@ -95,10 +95,10 @@ const SocialLink = () => {
     <div className="flex flex-col items-center h-full justify-evenly">
       <h1 className="text-4xl">Contact</h1>
       <div className="flex flex-col w-10/12 " >
-          <div className="flex items-center justify-between m-3 " onClick={copyToClipboard('0779495652')}>
+          <div className="flex items-center justify-between m-3 " >
             <div className="">
               <span className="text-cgray text-lg">07-79-49-56-52</span>
-              <i class='fas fa-clipboard-list fa-lg border-2 rounded-lg p-2 m-1 text-cgray'></i>
+              <i class='fas fa-clipboard-list fa-lg border-2 rounded-lg p-2 m-1 text-cgray' onClick={(e) => copyToClipboard(e,'0779495652')}></i>
             </div>
             <i className="fas fa-mobile-alt fa-5x text-cpurple text-center w-20"></i>
           </div>
@@ -108,10 +108,10 @@ const SocialLink = () => {
                 <i className="fab fa-github fa-5x text-cpurple text-center w-20"></i>
             </div>
           </a>
-          <div className="flex items-center justify-between m-3" onClick={copyToClipboard('charles.vin@outlook.fr')}>
+          <div className="flex items-center justify-between m-3">
             <div className="">
               <span className="text-cgray text-lg">charles.vin@outlook.fr </span>
-              <i class='fas fa-clipboard-list fa-lg border-2 rounded-lg p-2 m-1 text-cgray'></i>
+              <i class='fas fa-clipboard-list fa-lg border-2 rounded-lg p-2 m-1 text-cgray' onClick={(e) => copyToClipboard(e,'charles.vin@outlook.fr')}></i>
             </div>
             <i className="fas fa-envelope-square fa-5x text-cpurple text-center w-20"></i>
           </div>
@@ -127,18 +127,18 @@ const SocialLink = () => {
   )
 }
 
-const copyToClipboard = (text) => {
+const copyToClipboard = (event, text) => {
   navigator.clipboard.writeText(text).then(() => {
       console.log('Copying to clipboard was successful!');
-      outFunc()
+      outFunc(event)
   }, function (err) {
       console.error('Could not copy text: ', err);
   });
 }
 
-const outFunc = (s) => {
-  let tooltip = document.getElementById("myTooltip" + s);
-  tooltip.innerHTML = "Copied to clipboard! ";
+const outFunc = (event) => {
+  event.target.classList.toggle("fa-clipboard-list");
+  event.target.classList.toggle("fa-clipboard-check");
 }
 
 export default App;
