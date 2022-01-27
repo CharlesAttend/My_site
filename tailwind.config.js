@@ -18,7 +18,7 @@ module.exports = {
         'cpurple': '#872AB0',
         'cdpurple': '#23024D',
         'cdblue': '#000636',
-        'white': '#FFFFFF',
+        'cwhite': '#FAFAFB',
       },
     },
   },
