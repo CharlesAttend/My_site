@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import {
   Link
 } from "react-router-dom";
@@ -50,6 +50,8 @@ const LandingPage = () => {
 }
 
 const Presentation = () => {
+  const [active, setActive] = useState(true)
+
   const [props1, start1] = useSpring(() => ({
     x: "100vw",
     config: config.gentle, 
@@ -62,11 +64,12 @@ const Presentation = () => {
 
   return (<section className="bg-white">
     <div className="m-5">
-      <ReactVisibilitySensor>
+      <ReactVisibilitySensor active={active}>
         {({isVisible}) =>{
           if(isVisible){
             start1({from: { x: "100vw" }, to: { x: "0vw" }})
             start2({from: { x: "100vw" }, to: { x: "0vw"}, delay: 500})
+            setActive(false)
           }
           return (<div className="grid-cols-3 gap-4 lg:grid">
             <animated.div className="flex flex-col justify-center item-center lg:col-span-2 lg:flex-row bg-white p-3 shadow-xl" style={props1}>
