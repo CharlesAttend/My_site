@@ -41,8 +41,8 @@ const LandingPage = () => {
     <div id="landingPage" className="flex justify-center items-center h-screen">
       <ParticlesBackground/>
       <animated.div className="border border-cdpurple p-3 rounded-lg shadow-lg text-center bg-white backdrop-blur" style={props}>
-        <h1 className="text-cdpurple text-5xl font-semibold">Charles Vin</h1>
-        <h2 className="text-cdpurple">L3-MIASHS-SC</h2>
+        <span className="text-cdpurple text-5xl font-semibold">Charles Vin</span>
+        <span className="text-cdpurple">L3-MIASHS-SC</span>
       </animated.div>
     </div>
 )
@@ -93,7 +93,7 @@ const Projet = () => (
 const SocialLink = () => {
   return (<section className="h-screen bg-white">
     <div className="flex flex-col items-center h-full justify-evenly">
-      <h1 className="text-4xl">Contact</h1>
+      <span className="text-4xl">Contact</span>
       <div className="flex flex-col w-10/12 " >
           <div className="flex items-center justify-between m-3 " >
             <div className="">
