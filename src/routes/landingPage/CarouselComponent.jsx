@@ -22,7 +22,7 @@ const CarouselComponent = () => {
 					<span className="text-center">Téléchargement et synchronisation de playlist SoundCloud et YouTube.</span>
 					<div className="flex flex-wrap justify-center mb-3">
 						{['Python', 'Crontab', 'Owncloud', 'Webdav', 'YoutubeDL'].map(
-							(keyword, index) => <div className="border rounded-lg m-1 p-1 whitespace-nowrap" key={index}>{keyword}</div>)}
+							(keyword, index) => <div className="border rounded-lg m-1 p-1 whitespace-nowrap shadow-md" key={index}>{keyword}</div>)}
 					</div>
 					<a href="https://django.charles.vin/musicsync" class="border text-cdpurple border-cpurple p-2 m-2 rounded-md hover:bg-cpurple hover:text-white" target="_blank" rel="noopener noreferrer">Accéder à l'interface</a>
 				</div>
@@ -34,7 +34,7 @@ const CarouselComponent = () => {
 					<span className="text-center">Compromis observation-action en apprentissage par renforcement</span>
 					<div className="flex flex-wrap justify-center mb-3">
 						{['RL', 'Tensorflow', 'POMDP'].map(
-							(keyword, index) => <div className="border rounded-lg m-1 p-1 whitespace-nowrap" key={index}>{keyword}</div>)}
+							(keyword, index) => <div className="border rounded-lg m-1 p-1 whitespace-nowrap shadow-md" key={index}>{keyword}</div>)}
 					</div>
 					<Link to='/blog/Apprentissage_par_renforcement' class="border text-cdpurple border-cpurple p-2 m-2 rounded-md hover:bg-cpurple hover:text-white">Voir l'article du blog</Link>
 				</div>
@@ -46,7 +46,7 @@ const CarouselComponent = () => {
 				<div className="flex flex-col items-center">
 					<div className="flex flex-wrap justify-center mb-3">
 						{['JavaScript', 'Html', 'Css', 'Mathématiques'].map(
-							(keyword, index) => <div className="border rounded-lg m-1 p-1 whitespace-nowrap" key={index}>{keyword}</div>)}
+							(keyword, index) => <div className="border rounded-lg m-1 p-1 whitespace-nowrap shadow-md" key={index}>{keyword}</div>)}
 					</div>
 					<a href="https://charlesattend.github.io/Monte-Carlo-pi-estimation-visualization/" class="border text-cdpurple border-cpurple p-2 m-2 rounded-md hover:bg-cpurple hover:text-white" target="_blank" rel="noopener noreferrer">Accéder à l'interface</a>
 				</div>
@@ -59,7 +59,7 @@ const CarouselComponent = () => {
 					<span className="text-center">Proposition de recettes à partir d'une liste d'ingrédients disponibles. Et autocomplétion des ingrédients durant la saisie. J'aimerai beaucoup pousser ce projet dans le futur !</span>
 					<div className="flex flex-wrap justify-center mb-3">
 						{['Python', 'Trie', 'Data Cleaning'].map(
-							(keyword, index) => <div className="border rounded-lg m-1 p-1 whitespace-nowrap" key={index}>{keyword}</div>)}
+							(keyword, index) => <div className="border rounded-lg m-1 p-1 whitespace-nowrap shadow-md" key={index}>{keyword}</div>)}
 					</div>
 					<a href="https://github.com/CharlesAttend/Recipe-chooser" class="border p-2 m-2 text-cdpurple rounded-md hover:bg-cpurple hover:text-white" target="_blank" rel="noopener noreferrer">Accéder au dépôt GitHub</a>
 				</div>

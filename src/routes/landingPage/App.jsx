@@ -75,7 +75,7 @@ const Presentation = () => (
               Je m'intéresse également aux cryptomonnaies et à la blockchain qui me semble être une innovation incroyable par son apport de décentralisation. </p>
             <div className="flex justify-center flex-wrap">
               {["Escalade", "Course à pied", "Permaculture", 'Cryptomonnaies', 'Blockchain'].map(
-                (keyword, index) => (<span className="border rounded-lg m-1 p-1 whitespace-nowrap" key={index}>{keyword}</span>))}
+                (keyword, index) => (<span className="border rounded-lg m-1 p-1 whitespace-nowrap shadow-md" key={index}>{keyword}</span>))}
             </div>
           </div>
         </div>
