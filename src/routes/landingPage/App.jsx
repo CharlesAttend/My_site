@@ -2,7 +2,7 @@ import React from "react";
 import {
   Link
 } from "react-router-dom";
-import { useSpring, animated } from 'react-spring'
+import { useSpring, animated, config} from 'react-spring'
 
 import ReactVisibilitySensor from "react-visibility-sensor";
 
@@ -35,6 +35,7 @@ const LandingPage = () => {
     to: { y: "0vh" }, 
     delay: 2000,
     loop: false,
+    config: config.gentle,
   })
   
   return (
@@ -50,12 +51,13 @@ const LandingPage = () => {
 
 const Presentation = () => {
   const [props1, start1] = useSpring(() => ({
-    x: "100vw", 
+    x: "100vw",
+    config: config.gentle, 
   }))
 
   const [props2, start2] = useSpring(() => ({
     x: "100vw",
-    
+    config: config.gentle,
   }))
 
   return (<section className="bg-white">
