@@ -4,6 +4,8 @@ import {
 } from "react-router-dom";
 import { useSpring, animated } from 'react-spring'
 
+import ReactVisibilitySensor from "react-visibility-sensor";
+
 import ParticlesBackground from './ParticlesBackground'
 import CarouselComponent from './CarouselComponent'
 
@@ -27,13 +29,11 @@ const App = () => {
   );
 }
 
-// bg-gradient-to-t from-gray-500 to-transparent bg-fixed"
 const LandingPage = () => {
-  // const h = document.querySelector('#landingPage').clientHeight;
   const props = useSpring({ 
     from: { y: "55vh" } ,
     to: { y: "0vh" }, 
-    delay: 1000,
+    delay: 2000,
     loop: false,
   })
   
@@ -48,43 +48,61 @@ const LandingPage = () => {
 )
 }
 
-const Presentation = () => (
-  <section className="bg-white">
+const Presentation = () => {
+  const [props1, start1] = useSpring(() => ({
+    x: "100vw", 
+  }))
+
+  const [props2, start2] = useSpring(() => ({
+    x: "100vw",
+    
+  }))
+
+  return (<section className="bg-white">
     <div className="m-5">
-      <div className="grid-cols-3 gap-4 lg:grid">
+      <ReactVisibilitySensor>
+        {({isVisible}) =>{
+          if(isVisible){
+            start1({from: { x: "100vw" }, to: { x: "0vw" }})
+            start2({from: { x: "100vw" }, to: { x: "0vw"}, delay: 500})
+          }
+          return (<div className="grid-cols-3 gap-4 lg:grid">
+            <animated.div className="flex flex-col justify-center item-center lg:col-span-2 lg:flex-row bg-white p-3 shadow-xl" style={props1}>
+              <div className="flex justify-center item-center lg:flex-col">
+                <img className="border border-cdpurple rounded-full m-5 shadow-xl max-w-xs max-h-80" src={pp} alt="profile pic" />
+              </div>
+              <div className="flex flex-col justify-center">
+                <div className="text-cdpurple text-2xl text-center font-semibold">Présentation</div>
+                <div className='text-cgray text-lg text-center'>
+                  <p className="m-1">Étudiant en licence MIASHS, je suis passionné par les mathématiques et l'informatique.</p>
+                  <p className="m-1">L'enseignement des Sciences-Cognitives me permet de voir au delà des applications usuelles de l'informatique en adaptant au maximum la machine à l'Homme.</p>
+                </div>
+              </div>
+            </animated.div>
 
-        <div className="flex flex-col justify-center item-center lg:col-span-2 lg:flex-row bg-white p-3 shadow-xl">
-          <div className="flex justify-center item-center lg:flex-col">
-            <img className="border border-cdpurple rounded-full m-5 shadow-xl max-w-xs max-h-80" src={pp} alt="profile pic" />
-          </div>
-          <div className="flex flex-col justify-center">
-            <div className="text-cdpurple text-2xl text-center font-semibold">Présentation</div>
-            <div className='text-cgray text-lg text-center'>
-              <p className="m-1">Étudiant en licence MIASHS, je suis passionné par les mathématiques et l'informatique.</p>
-              <p className="m-1">L'enseignement des Sciences-Cognitives me permet de voir au delà des applications usuelles de l'informatique en adaptant au maximum la machine à l'Homme.</p>
-            </div>
-          </div>
-        </div>
+            <animated.div className="flex flex-col justify-center item-center bg-white mt-10 p-3 shadow-xl" style={props2}>
+              <div className="text-cdpurple text-2xl text-center font-semibold">Centre d'intérêt</div>
+              <div className='text-cgray text-lg text-center'>
+                <p className="m-1">Durant mon temps libre j'approfondis mes connaissances en informatique par de nombreux projets.</p>
+                <p className="m-1">Je fais de l'escalade et de la course à pied depuis plusieurs années.
+                  Écologiste, j'ai déjà pratiqué la permaculture et essaye de limiter mon impact environnemental au quotidien.
+                  Je m'intéresse également aux cryptomonnaies et à la blockchain qui me semble être une innovation incroyable par son apport de décentralisation. </p>
+                <div className="flex justify-center flex-wrap">
+                  {["Escalade", "Course à pied", "Permaculture", 'Cryptomonnaies', 'Blockchain'].map(
+                    (keyword, index) => (<span className="border rounded-lg m-1 p-1 whitespace-nowrap shadow-md" key={index}>{keyword}</span>))}
+                </div>
+              </div>
+            </animated.div>
+          </div>)}
+        }
+      </ReactVisibilitySensor>
 
-        <div className="flex flex-col justify-center item-center bg-white mt-10 p-3 shadow-xl">
-          <div className="text-cdpurple text-2xl text-center font-semibold">Centre d'intérêt</div>
-          <div className='text-cgray text-lg text-center'>
-            <p className="m-1">Durant mon temps libre j'approfondis mes connaissances en informatique par de nombreux projets.</p>
-            <p className="m-1">Je fais de l'escalade et de la course à pied depuis plusieurs années.
-              Écologiste, j'ai déjà pratiqué la permaculture et essaye de limiter mon impact environnemental au quotidien.
-              Je m'intéresse également aux cryptomonnaies et à la blockchain qui me semble être une innovation incroyable par son apport de décentralisation. </p>
-            <div className="flex justify-center flex-wrap">
-              {["Escalade", "Course à pied", "Permaculture", 'Cryptomonnaies', 'Blockchain'].map(
-                (keyword, index) => (<span className="border rounded-lg m-1 p-1 whitespace-nowrap shadow-md" key={index}>{keyword}</span>))}
-            </div>
-          </div>
-        </div>
 
-      </div>
 
     </div>
   </section>
-)
+  )
+}
 
 const Projet = () => (
   // Carte qui défile (plus complexe à faire) ? + redirection vers le blog avec un bouton 
