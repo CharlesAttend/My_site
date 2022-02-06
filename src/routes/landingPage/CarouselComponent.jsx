@@ -26,7 +26,7 @@ const CarouselComponent = () => {
 							{['Python', 'Crontab', 'Owncloud', 'Webdav', 'YoutubeDL'].map(
 								(keyword, index) => <div className="border rounded-lg m-1 p-1 whitespace-nowrap shadow-md" key={index}>{keyword}</div>)}
 						</div>
-						<a href="https://django.charles.vin/musicsync" class="border text-cdpurple border-cpurple p-2 m-2 rounded-md hover:bg-cpurple hover:text-white" target="_blank" rel="noopener noreferrer">Accéder à l'interface</a>
+						<Link to='/blog/MusicSync' class="border text-cdpurple border-cpurple p-2 m-2 rounded-md hover:bg-cpurple hover:text-white">Voir l'article du blog</Link>
 					</div>
 				</div>
 			</div>
