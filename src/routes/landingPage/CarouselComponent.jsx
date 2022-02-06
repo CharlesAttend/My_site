@@ -69,7 +69,7 @@ const CarouselComponent = () => {
 							{['Python', 'Trie', 'Data Cleaning'].map(
 								(keyword, index) => <div className="border rounded-lg m-1 p-1 whitespace-nowrap shadow-md" key={index}>{keyword}</div>)}
 						</div>
-						<a href="https://github.com/CharlesAttend/Recipe-chooser" class="border p-2 m-2 text-cdpurple rounded-md hover:bg-cpurple hover:text-white" target="_blank" rel="noopener noreferrer">Accéder au dépôt GitHub</a>
+						<a href="https://github.com/CharlesAttend/Recipe-chooser" class="border text-cdpurple border-cpurple p-2 m-2 rounded-md hover:bg-cpurple hover:text-white" target="_blank" rel="noopener noreferrer">Accéder au dépôt GitHub</a>
 					</div>
 				</div>
 			</div>
