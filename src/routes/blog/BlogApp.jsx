@@ -9,7 +9,7 @@ import './github-markdown-light.css';
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 
 const BlogApp = () => {
@@ -32,23 +32,6 @@ const BlogApp = () => {
 	}, []);
 	
 	let paramTitle = useParams().title;
-	// if(paramTitle === undefined){
-	// 	return (
-	// 		<div className='flex flex-col p-5 bg-cwhite h-screen'>
-	// 			<span className='py-10 text-center text-4xl text-cpurple'>Blog</span>
-	// 			<ul className='row-span-2 list-inside list-disc flex flex-col justify-center text-cgray'>
-	// 				<SideBar postsTitleList={postsTitleList} />
-	// 			</ul>
-	// 		</div>
-	// 	)
-	// }
-	// else {
-	// 	return (
-	// 		<div className='m-10'>
-	// 			<PostBody postsMap={postsMap}/>
-	// 		</div>
-	// 	)
-	// }
 
 	return (
 		<div className='lg:grid lg:grid-cols-6 lg:h-screen'>
@@ -60,7 +43,7 @@ const BlogApp = () => {
 }
 
 const SideBar = ({postsTitleList}) => (
-	<div className='flex flex-col p-5 bg-cwhite h-full'>
+	<div className='flex flex-col p-5 bg-cwhite h-screen lg:h-full'>
 		<span className='py-10 text-center text-4xl text-cpurple'>Blog</span>
 		<ul className='row-span-2 lg:col-span-6 lg:pl-12 list-inside list-disc flex flex-col justify-center text-cgray'>
 			{postsTitleList.map( (title) => (
@@ -81,32 +64,35 @@ const PostBody = ({ postsMap }) => {
 	else {
 		paramTitle = paramTitle.replaceAll(' ', '_').replaceAll('é', 'e');
 		return (
-			<div className='m-10 lg:mx-56'>
-				<div className='markdown-body'>
-					<ReactMarkdown 
-					children={postsMap.get(paramTitle)} 
-					linkTarget="_blank" 
-					remarkPlugins={[removeComments, remarkGfm, ]}
-					rehypePlugins={[rehypeRaw]}
-					components={{
-						code({ node, inline, className, children, ...props }) {
-							const match = /language-(\w+)/.exec(className || '')
-							return !inline && match ? (
-								<SyntaxHighlighter
-									children={String(children).replace(/\n$/, '')}
-									style={materialLight}
-									language={match[1]}
-									PreTag="div"
-									{...props}
-								/>
-							) : (
-								<code className={className} {...props}>
-									{children}
-								</code>
-							)
-						}
-					}} 
-					/>
+			<div>
+				<div className='flex justify-center lg:hidden'><Link to='/blog/' className='border border-cpurple p-2 m-2 rounded-md bg-cpurple text-white hover:text-cdpurple hover:bg-white text-xl font-semibold'>Menu</Link></div>
+				<div className='mx-10 my-2 lg:mx-56 lg:my-10'>
+					<div className='markdown-body'>
+						<ReactMarkdown 
+						children={postsMap.get(paramTitle)} 
+						linkTarget="_blank" 
+						remarkPlugins={[removeComments, remarkGfm, ]}
+						rehypePlugins={[rehypeRaw]}
+						components={{
+							code({ node, inline, className, children, ...props }) {
+								const match = /language-(\w+)/.exec(className || '')
+								return !inline && match ? (
+									<SyntaxHighlighter
+										children={String(children).replace(/\n$/, '')}
+										style={materialLight}
+										language={match[1]}
+										PreTag="div"
+										{...props}
+									/>
+								) : (
+									<code className={className} {...props}>
+										{children}
+									</code>
+								)
+							}
+						}} 
+						/>
+					</div>
 				</div>
 			</div>
 		)
