@@ -1,8 +1,14 @@
 import React, { useState, useEffect} from 'react';
-import ReactMarkdown from 'react-markdown';
 import { getBlogPostText, getBlogPostTitle } from './blogPostHelper';
+
+import ReactMarkdown from 'react-markdown';
 import removeComments from 'remark-remove-comments';
-import './github-markdown-light.css'
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
+import {materialLight} from 'react-syntax-highlighter/dist/esm/styles/prism'
+import './github-markdown-light.css';
+import remarkGfm from 'remark-gfm'
+import rehypeRaw from 'rehype-raw'
+
 import { NavLink } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 
@@ -66,9 +72,9 @@ const SideBar = ({postsTitleList}) => (
 	</div>
 )
 		
-const PostBody = ({postsMap}) => {
+const PostBody = ({ postsMap }) => {
 	let paramTitle = useParams().title;
-	if(paramTitle === undefined){
+	if (paramTitle === undefined) {
 		paramTitle = '';
 		return <div></div>
 	}
@@ -77,12 +83,35 @@ const PostBody = ({postsMap}) => {
 		return (
 			<div className='m-10 lg:mx-56'>
 				<div className='markdown-body'>
-					<ReactMarkdown children={postsMap.get(paramTitle)} remarkPlugins={[removeComments]} />
+					<ReactMarkdown 
+					children={postsMap.get(paramTitle)} 
+					linkTarget="_blank" 
+					remarkPlugins={[removeComments, remarkGfm, ]}
+					rehypePlugins={[rehypeRaw]}
+					components={{
+						code({ node, inline, className, children, ...props }) {
+							const match = /language-(\w+)/.exec(className || '')
+							return !inline && match ? (
+								<SyntaxHighlighter
+									children={String(children).replace(/\n$/, '')}
+									style={materialLight}
+									language={match[1]}
+									PreTag="div"
+									{...props}
+								/>
+							) : (
+								<code className={className} {...props}>
+									{children}
+								</code>
+							)
+						}
+					}} 
+					/>
 				</div>
 			</div>
 		)
 	}
-	
+
 }
 
 export default BlogApp;
