@@ -54,7 +54,7 @@ const BlogApp = () => {
 }
 
 const SideBar = ({postsTitleList}) => (
-	<div className='flex flex-col p-5 bg-cwhite h-screen'>
+	<div className='flex flex-col p-5 bg-cwhite h-full'>
 		<span className='py-10 text-center text-4xl text-cpurple'>Blog</span>
 		<ul className='row-span-2 lg:col-span-6 lg:pl-12 list-inside list-disc flex flex-col justify-center text-cgray'>
 			{postsTitleList.map( (title) => (
