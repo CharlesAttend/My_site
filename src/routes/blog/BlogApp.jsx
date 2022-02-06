@@ -75,7 +75,7 @@ const PostBody = ({postsMap}) => {
 	else {
 		paramTitle = paramTitle.replaceAll(' ', '_').replaceAll('é', 'e');
 		return (
-			<div className='m-10'>
+			<div className='m-10 lg:mx-56'>
 				<div className='markdown-body'>
 					<ReactMarkdown children={postsMap.get(paramTitle)} remarkPlugins={[removeComments]} />
 				</div>
