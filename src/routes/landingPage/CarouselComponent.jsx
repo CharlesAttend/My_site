@@ -17,8 +17,8 @@ const CarouselComponent = () => {
 		<Carousel className='text-cgray px-3 sm:px-6 md:px-12 lg:px-20' breakPoints={breakpoint} itemPadding={[10]}>
 
 			<div className="bg-white p-3 rounded-lg grid grid-rows-2">
-				<CloudLogo className="text-cdpurple w-2/4 pb-2" />
-				<div className=""> 
+				<div className='flex items-center justify-center border-b border-dotted'><CloudLogo className="text-cdpurple w-2/4 pb-2" /></div>
+				<div className="flex items-center justify-center flex-col"> 
 					<div className="text-cdpurple text-2xl text-center">MusicSync</div>
 					<div className="flex flex-col items-center">
 						<span className="text-center">Téléchargement et synchronisation de playlist SoundCloud et YouTube.</span>
@@ -31,8 +31,8 @@ const CarouselComponent = () => {
 				</div>
 			</div>
 			<div className="bg-white p-3 rounded-lg grid grid-rows-2">
-				<img src={RL} alt="The web project" className="pb-2 w-full" />
-				<div className=""> 
+				<div className="flex items-center justify-center border-b border-dotted"><img src={RL} alt="The web project" className="pb-2 w-full"/></div>
+				<div className="flex items-center justify-center flex-col"> 
 					<div className="text-cdpurple text-2xl text-center">Apprentissage par renforcement</div>
 					<div className="flex flex-col items-center">
 						<span className="text-center">Compromis observation-action en apprentissage par renforcement</span>
@@ -46,8 +46,8 @@ const CarouselComponent = () => {
 			</div>
 
 			<div className="bg-white p-3 rounded-lg grid grid-rows-2">
-				<img src={monte_carlo_pi} alt="The web project" className="pb-2 w-full" />
-				<div className=""> 
+				<div className='flex items-center justify-center border-b border-dotted'><img src={monte_carlo_pi} alt="The web project" className="pb-2 w-full" /></div>
+				<div className="flex items-center justify-center flex-col"> 
 					<div className="text-cdpurple text-2xl text-center">Visualisation de la méthode Monte-Carlos pour estimer Pi</div>
 					<div className="flex flex-col items-center">
 						<div className="flex flex-wrap justify-center mb-3">
@@ -60,8 +60,8 @@ const CarouselComponent = () => {
 			</div>
 
 			<div className="bg-white p-3 rounded-lg grid grid-rows-2">
-				<img src={chili} alt="The web project" className="pb-2 w-full" />
-				<div className=""> 
+				<div className='flex items-center justify-center border-b border-dotted'><img src={chili} alt="The web project" className="pb-2 w-full" /></div>
+				<div className="flex items-center justify-center flex-col"> 
 					<div className="text-cdpurple text-2xl text-center">Recipe Chooser</div>
 					<div className="flex flex-col items-center">
 						<span className="text-center">Proposition de recettes à partir d'une liste d'ingrédients disponibles. Et autocomplétion des ingrédients durant la saisie. J'aimerai beaucoup pousser ce projet dans le futur !</span>
