@@ -121,7 +121,7 @@ const Projet = () => (
     <div className="flex flex-col items-center justify-evenly box-border">
       <span className="text-4xl mb-7 box-border">Quelques projets</span>
       <CarouselComponent/>
-      <Link to='/blog' className=" box-border border text-cdpurple p-2 m-2 rounded-md bg-white hover:bg-cpurple hover:text-white hover:border-cpurple" >Acceder au blog</Link>
+      <Link to='/blog' className="box-border border text-cdpurple p-4 m-10 text-3xl font-semibold rounded-md bg-white hover:bg-cpurple hover:text-white hover:border-cpurple" >Acceder au blog</Link>
     </div>
   </section>
 )
