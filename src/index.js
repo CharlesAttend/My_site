@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {
   BrowserRouter,
+  HashRouter,
   Routes,
   Route
 } from "react-router-dom";
@@ -13,7 +14,7 @@ import BlogApp from './routes/blog/BlogApp';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter basename='/'>
       <Routes>
         <Route path='/' element={ <App/> }/>
         <Route path='/blog' element={ <BlogApp/> }>
@@ -21,7 +22,7 @@ ReactDOM.render(
         </Route>
         <Route path="*" element={<div class="p-5">There's nothing here!</div> }/>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

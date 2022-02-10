@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Link
-} from "react-router-dom";
+import { Link, HashRouter } from "react-router-dom";
 import { useSpring, animated, config} from 'react-spring'
 
 import ReactVisibilitySensor from "react-visibility-sensor";
@@ -16,11 +14,11 @@ const App = () => {
   return (
     <div className="bg-white font-body box-border">
       {/* <nav className="fixed lg:hidden text-lg w-full shadow-lg py-2 z-20">
-        <div className="flex justify-evenly items-center font-medium px-2">
-          <div className="border-l-1 border-r-5 border-red-700">Accueil</div>
-          <div className="border-l-1 border-r-5 border-red-700" onClick={}>Blog</div>
-        </div>
-      </nav> */}
+      <div className="flex justify-evenly items-center font-medium px-2">
+      <div className="border-l-1 border-r-5 border-red-700">Accueil</div>
+      <div className="border-l-1 border-r-5 border-red-700" onClick={}>Blog</div>
+      </div>
+    </nav> */}
       <LandingPage />
       <Presentation />
       <Projet />
