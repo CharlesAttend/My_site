@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/My_site/static/css/main.1d0e2076.css",
-    "main.js": "/My_site/static/js/main.a8b7e8d7.js",
+    "main.js": "/My_site/static/js/main.956f5e40.js",
     "static/js/787.66f03ae4.chunk.js": "/My_site/static/js/787.66f03ae4.chunk.js",
     "static/media/pp.jpg": "/My_site/static/media/pp.ebaab878f47bd440cc18.jpg",
     "static/media/chili.jpg": "/My_site/static/media/chili.d9facda47d8799481722.jpg",
@@ -18,11 +18,11 @@
     "static/media/Smart Mirror.md": "/My_site/static/media/Smart Mirror.25ab3764e91cca39f332.md",
     "static/media/Portable Smart TV.md": "/My_site/static/media/Portable Smart TV.4daa81da799948ee7485.md",
     "main.1d0e2076.css.map": "/My_site/static/css/main.1d0e2076.css.map",
-    "main.a8b7e8d7.js.map": "/My_site/static/js/main.a8b7e8d7.js.map",
+    "main.956f5e40.js.map": "/My_site/static/js/main.956f5e40.js.map",
     "787.66f03ae4.chunk.js.map": "/My_site/static/js/787.66f03ae4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1d0e2076.css",
-    "static/js/main.a8b7e8d7.js"
+    "static/js/main.956f5e40.js"
   ]
 }
