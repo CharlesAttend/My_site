@@ -50,7 +50,7 @@ const LandingPage = () => {
 const Presentation = () => {
   const [active, setActive] = useState(true)
 
-  const [props1, start1] = useSpring(() => ({
+  const [props1, api1] = useSpring(() => ({
     from: { 
       opacity: 0,
       transform: 'translateX(-250px)'
@@ -58,7 +58,7 @@ const Presentation = () => {
     config: config.gentle, 
   }))
 
-  const [props2, start2] = useSpring(() => ({
+  const [props2, api2] = useSpring(() => ({
     from: { 
       opacity: 0,
       transform: 'translateX(-250px)'
@@ -71,8 +71,8 @@ const Presentation = () => {
       <ReactVisibilitySensor active={active} partialVisibility="top" minTopValue={100}>
         {({isVisible}) =>{
           if(isVisible){
-            start1({opacity: 1, transform: 'translateX(0px)',})
-            start2({opacity: 1, delay: 1000, transform: 'translateX(0px)'})
+            api1.start({opacity: 1, transform: 'translateX(0px)',})
+            api2.start({opacity: 1, delay: 1000, transform: 'translateX(0px)'})
             setActive(false)
           }
           return (<div className="grid-cols-3 gap-4 lg:grid">
