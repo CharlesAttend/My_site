@@ -132,7 +132,7 @@ const SocialLink = () => {
           <div className="flex items-center justify-between  lg:flex-col-reverse lg:bg-gray-50 lg:p-6 lg:h-full">
             <div className="lg:flex flex-col-reverse items-center">
               <span className="text-cgray text-lg">charles.vin@outlook.fr </span>
-              <i class='fas fa-clipboard-list fa-lg border-2 rounded-lg p-2 m-1 text-cgray' onClick={(e) => copyToClipboard(e,'charles.vin@outlook.fr')}></i>
+              <i className='fas fa-clipboard-list fa-lg border-2 rounded-lg p-2 m-1 text-cgray' onClick={(e) => copyToClipboard(e,'charles.vin@outlook.fr')}></i>
             </div>
             <i className="fas fa-envelope-square fa-5x text-cpurple text-center w-20"></i>
           </div>
@@ -151,7 +151,7 @@ const SocialLink = () => {
           <div className="flex items-center justify-between  lg:flex-col-reverse lg:bg-gray-50 lg:p-6 lg:h-full" >
             <div className="lg:flex flex-col-reverse items-center">
               <span className="text-cgray text-lg">07-79-49-56-52</span>
-              <i class='fas fa-clipboard-list fa-lg border-2 rounded-lg p-2 m-1 text-cgray' onClick={(e) => copyToClipboard(e,'0779495652')}></i>
+              <i className='fas fa-clipboard-list fa-lg border-2 rounded-lg p-2 m-1 text-cgray' onClick={(e) => copyToClipboard(e,'0779495652')}></i>
             </div>
             <i className="fas fa-mobile-alt fa-5x text-cpurple text-center w-20"></i>
           </div>
