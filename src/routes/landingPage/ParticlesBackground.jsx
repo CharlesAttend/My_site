@@ -1,10 +1,9 @@
 import Particles from 'react-tsparticles';
-import { Main } from "tsparticles";
 import { loadTrianglesPreset } from "tsparticles-preset-triangles";
 import ParticlesParam from "./particlesParam";
 
 const ParticlesBackground = () => {
-    const customInit = (main: Main) => {
+    const customInit = (main) => {
         // this adds the preset to tsParticles, you can safely use the
         loadTrianglesPreset(main);
     }
