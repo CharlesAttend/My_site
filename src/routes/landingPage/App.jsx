@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, HashRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSpring, animated, config} from 'react-spring'
 
 import ReactVisibilitySensor from "react-visibility-sensor";
@@ -119,7 +119,9 @@ const Projet = () => (
     <div className="flex flex-col items-center justify-evenly box-border">
       <span className="text-4xl mb-7 box-border">Quelques projets</span>
       <CarouselComponent/>
-      <Link to='/blog' className="box-border border text-cdpurple p-4 m-10 text-3xl font-semibold rounded-md bg-white hover:bg-cpurple hover:text-white hover:border-cpurple" >Acceder au blog</Link>
+      <Link to='/blog' className="box-border border text-cdpurple p-4 m-10 text-3xl font-semibold rounded-md bg-white hover:bg-cpurple hover:text-white hover:border-cpurple">
+        Acceder au blog
+      </Link>
     </div>
   </section>
 )
@@ -131,7 +133,7 @@ const SocialLink = () => {
       <div className="w-10/12 lg:no-flex grid gap-5 grid-row-4 sm:gap-10 lg:grid-row-none lg:grid-cols-4  xl:gap-32 " >
           <div className="flex items-center justify-between  lg:flex-col-reverse lg:bg-gray-50 lg:p-6 lg:h-full">
             <div className="lg:flex flex-col-reverse items-center">
-              <span className="text-cgray text-lg">charles.vin@outlook.fr </span>
+              <span className="text-cgray text-lg">charles.vin@outlook.fr</span>
               <i className='fas fa-clipboard-list fa-lg border-2 rounded-lg p-2 m-1 text-cgray' onClick={(e) => copyToClipboard(e,'charles.vin@outlook.fr')}></i>
             </div>
             <i className="fas fa-envelope-square fa-5x text-cpurple text-center w-20"></i>
