@@ -29,13 +29,13 @@ Le script télécharge les musiques en les numérotant en fonction de leur index
 Pourquoi ? En général, j'écoute toujours les musiques sorties récemment. Numéroter les chansons dans leur ordre d'ajout me permet de les maintenir en haut de la liste !
 
 ### Test et ajout de fonctionnalités
-Dans l'ordre chronologique
-- J'ai plusieurs fois essayé de tagger les musiques avec le nom de l'artiste et le titre de la chanson. Ca a fonctionné pendant un temps mais j'ai retirer la fonctionnalité ensuite car je n'arrivais pas a atteindre mon niveau d'exigence dans l'extraction à partir du titre de youtube (assez variable). J'avais même fait un peu de SQLite pour tout mettre dans une database.
-- Un ami m'avais montré son Subsonic, je m'étais amusé à en set up un également mais je l'utilisais tellement rarement (uniquement pour une écoute aléatoire à travers toutes mes playlists sur un ordinateur) que je ne l'ai jamais réinstallé sur le nouveau raspberry pi 4.
+Dans l'ordre chronologique:
+- J'ai plusieurs fois essayé de tagger les musiques avec le nom de l'artiste et le titre de la chanson. Ca a fonctionné pendant un temps mais j'ai retiré la fonctionnalité ensuite car je n'arrivais pas à atteindre mon niveau d'exigence dans l'extraction à partir du titre de youtube (assez variable). J'avais même fait un peu de SQLite pour tout mettre dans une database.
+- Un ami m'avait montré son Subsonic, je m'étais amusé à en set up un également mais je l'utilisais tellement rarement (uniquement pour une écoute aléatoire à travers toutes mes playlists sur un ordinateur) que je ne l'ai jamais réinstallé sur le nouveau raspberry pi 4.
 - L'[interface Django](https://django.charles.vin/musicsync/) est arrivé en dernière pour pouvoir avoir une sorte de démo à mettre dans le CV. Ce ne fut pas très simple à faire mais j'ai réussi à le déployer sur le RPI4 après pas mal de difficulté. C'était aussi mes premiers pas pour faire du CSS beau. 
 
 ## Déploiement et synchronisation
-Le script tourne tous les jours sur un Raspberry Pi 4 avec une commande `crontab`. L'interface Django est également hébergé sur celui-ci desservie par un serveur `Apache2`. 
+Le script tourne tous les jours sur un Raspberry Pi 4 avec une commande `crontab`. L'interface Django est également hébergée sur celui-ci desservie par un serveur `Apache2`. 
 
 Pour synchroniser le tout sur mon téléphone j'utilise l'application [FolderSync](https://play.google.com/store/apps/details?id=dk.tacit.android.foldersync.lite) (qui fait un travail excellent) et un serveur `WEBDav`.
 Au début j'utilisais le serveur `sftp` du rpi4, pas giga sécurisé et optimisé, j'ai basculé sur un serveur `WEBDav` également host sur `Apache2`. Celui-ci était assez facile à configurer et en plus passe par le port 80, plus de port 22 ouvert yeah !
