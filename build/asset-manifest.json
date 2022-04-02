@@ -1,28 +1,29 @@
 {
   "files": {
-    "main.css": "/My_site/static/css/main.1d0e2076.css",
-    "main.js": "/My_site/static/js/main.956f5e40.js",
-    "static/js/787.66f03ae4.chunk.js": "/My_site/static/js/787.66f03ae4.chunk.js",
-    "static/media/pp.jpg": "/My_site/static/media/pp.ebaab878f47bd440cc18.jpg",
-    "static/media/chili.jpg": "/My_site/static/media/chili.d9facda47d8799481722.jpg",
-    "static/media/monte-carlo-pi.png": "/My_site/static/media/monte-carlo-pi.6fa2e4ce08887d39819b.png",
-    "static/media/RL.png": "/My_site/static/media/RL.3100a22dac65c1ca31cb.png",
-    "static/media/MusicSync.md": "/My_site/static/media/MusicSync.a8bd0b591ac409434171.md",
-    "static/media/Apprentissage par renforcement.md": "/My_site/static/media/Apprentissage par renforcement.bcf5aa39753d04d1e403.md",
-    "static/media/Plante Connectée.md": "/My_site/static/media/Plante Connectée.de1b768f4eb52904e238.md",
-    "static/media/Animation centre aéré.md": "/My_site/static/media/Animation centre aéré.e94324159ce46223ec59.md",
-    "static/media/cloud-download-alt-solid.svg": "/My_site/static/media/cloud-download-alt-solid.0e514aebca20206530d95c9eeefdd00f.svg",
-    "index.html": "/My_site/index.html",
-    "static/media/Personnalités.md": "/My_site/static/media/Personnalités.3b3749c824da7fb70607.md",
-    "static/media/Recipe Chooser.md": "/My_site/static/media/Recipe Chooser.18ba6a345f4f1e5c2737.md",
-    "static/media/Smart Mirror.md": "/My_site/static/media/Smart Mirror.25ab3764e91cca39f332.md",
-    "static/media/Portable Smart TV.md": "/My_site/static/media/Portable Smart TV.4daa81da799948ee7485.md",
-    "main.1d0e2076.css.map": "/My_site/static/css/main.1d0e2076.css.map",
-    "main.956f5e40.js.map": "/My_site/static/js/main.956f5e40.js.map",
-    "787.66f03ae4.chunk.js.map": "/My_site/static/js/787.66f03ae4.chunk.js.map"
+    "main.css": "/static/css/main.1d0e2076.css",
+    "main.js": "/static/js/main.98d7d3e3.js",
+    "static/js/787.66f03ae4.chunk.js": "/static/js/787.66f03ae4.chunk.js",
+    "static/media/pp.jpg": "/static/media/pp.ebaab878f47bd440cc18.jpg",
+    "static/media/chili.jpg": "/static/media/chili.d9facda47d8799481722.jpg",
+    "static/media/monte-carlo-pi.png": "/static/media/monte-carlo-pi.6fa2e4ce08887d39819b.png",
+    "static/media/Stage L2.md": "/static/media/Stage L2.f13698012df6bf0be10c.md",
+    "static/media/RL.png": "/static/media/RL.3100a22dac65c1ca31cb.png",
+    "static/media/MusicSync.md": "/static/media/MusicSync.6d63862ebb4774090641.md",
+    "static/media/Apprentissage par renforcement.md": "/static/media/Apprentissage par renforcement.bcf5aa39753d04d1e403.md",
+    "static/media/Plante Connectée.md": "/static/media/Plante Connectée.de1b768f4eb52904e238.md",
+    "static/media/Animation centre aéré.md": "/static/media/Animation centre aéré.e94324159ce46223ec59.md",
+    "static/media/cloud-download-alt-solid.svg": "/static/media/cloud-download-alt-solid.0e514aebca20206530d95c9eeefdd00f.svg",
+    "index.html": "/index.html",
+    "static/media/Personnalités.md": "/static/media/Personnalités.3b3749c824da7fb70607.md",
+    "static/media/Recipe Chooser.md": "/static/media/Recipe Chooser.18ba6a345f4f1e5c2737.md",
+    "static/media/Smart Mirror.md": "/static/media/Smart Mirror.25ab3764e91cca39f332.md",
+    "static/media/Portable Smart TV.md": "/static/media/Portable Smart TV.4daa81da799948ee7485.md",
+    "main.1d0e2076.css.map": "/static/css/main.1d0e2076.css.map",
+    "main.98d7d3e3.js.map": "/static/js/main.98d7d3e3.js.map",
+    "787.66f03ae4.chunk.js.map": "/static/js/787.66f03ae4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1d0e2076.css",
-    "static/js/main.956f5e40.js"
+    "static/js/main.98d7d3e3.js"
   ]
 }
