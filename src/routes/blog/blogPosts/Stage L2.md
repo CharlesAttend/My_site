@@ -1,5 +1,6 @@
 <!-- Stage L2 -->
 **Quick automatic conversion from Latex to Markdown (thanks to Pandoc)**
+========================================================================
 
 **Rapport de stage**
 
@@ -117,7 +118,7 @@ stagiaires, dirigé par Mme. Delevoye. La figure
 représente un organigramme du laboratoire.
 
 ![Organigramme du Laboratoire de recherche CNRS
-SCALab[]{label="organigramme"}](./organigramme.png){#organigramme
+SCALab[]{label="organigramme"}](./Stage_L2/organigramme.png){#organigramme
 width=".5\textwidth"}
 
 Présentation et domaine de recherche de ma tutrice
@@ -245,12 +246,12 @@ l'expérience. Les figures [\[QR\_code\]](#QR_code){reference-type="ref"
 reference="QR_code"} et [\[QR\_code2\]](#QR_code2){reference-type="ref"
 reference="QR_code2"} illustrent celle-ci.
 
-![QR-code partiellement détecté](./test_QR_code.png){width="\textwidth"}
+![QR-code partiellement détecté](./Stage_L2/test_QR_code.png){width="\textwidth"}
 
 [\[QR\_code\]]{#QR_code label="QR_code"}
 
 ![QR-code partiellement
-détecté](./test_QR_code2.png){width="\textwidth"}
+détecté](./Stage_L2/test_QR_code2.png){width="\textwidth"}
 
 [\[QR\_code2\]]{#QR_code2 label="QR_code2"}
 
@@ -313,7 +314,7 @@ traitement des données a été fait dans des Notebook Python et grâce aux
 bibliothèques Pandas, MatPlotLib, Seaborn et Numpy.
 
 ![Transformé de fourier sur l'axe z de
-l'accélération[]{label="tempo"}](./tempo_marche.png){#tempo
+l'accélération[]{label="tempo"}](./Stage_L2/tempo_marche.png){#tempo
 width="\textwidth"}
 
 Après cette réussite, il me fallait extraire l'orientation de la tête.
@@ -337,7 +338,7 @@ par manque de temps. En effet celui ci s'est déroulé la dernière semaine
 du stage, et une autre tâche plus importante m'avait été confiée : la
 rédaction d'un manuel d'utilisation des lunettes.
 
-![[]{label="acceleration"}](./acceleration_Lineplot.png){#acceleration
+![[]{label="acceleration"}](./Stage_L2/acceleration_Lineplot.png){#acceleration
 width="\textwidth"}
 
 ### Rédaction de manuel d'utilisation
