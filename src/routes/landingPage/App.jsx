@@ -8,6 +8,8 @@ import ParticlesBackground from './ParticlesBackground'
 import CarouselComponent from './CarouselComponent'
 
 import pp from './img/pp.jpg'
+import english_cv_pdf from './document/generic_english_CV_compressed.pdf'
+import french_cv_pdf from './document/generic_english_CV_compressed.pdf'
 
 
 const App = () => {
@@ -22,7 +24,6 @@ const App = () => {
       <LandingPage />
       <Presentation />
       <Projet />
-      <SocialLink />
     </div>
   );
 }
@@ -41,7 +42,7 @@ const LandingPage = () => {
       <ParticlesBackground/>
       <animated.div className="border border-cdpurple p-3 rounded-lg shadow-lg text-center bg-white backdrop-blur" style={props}>
         <div className="text-cdpurple text-5xl font-semibold">Charles Vin</div>
-        <div className="text-cdpurple">L3-MIASHS-SC</div>
+        <div className="text-cdpurple">M1-DAC | Sorbonne université</div>
       </animated.div>
     </div>
 )
@@ -66,32 +67,42 @@ const Presentation = () => {
     config: config.gentle,
   }))
 
+  const [props3, api3] = useSpring(() => ({
+    from: { 
+      opacity: 0,
+      transform: 'translateX(-250px)'
+    },
+    config: config.gentle,
+  }))
+
   return (<section className="bg-white">
     <div className="m-5">
       <ReactVisibilitySensor active={active} partialVisibility="top" minTopValue={100}>
         {({isVisible}) =>{
           if(isVisible){
             api1.start({opacity: 1, transform: 'translateX(0px)',})
-            api2.start({opacity: 1, delay: 1000, transform: 'translateX(0px)'})
+            api2.start({opacity: 1, delay: 500, transform: 'translateX(0px)'})
+            api3.start({opacity: 1, delay: 750, transform: 'translateX(0px)'})
             setActive(false)
           }
-          return (<div className="grid-cols-3 gap-4 lg:grid">
-            <animated.div className="flex flex-col justify-center item-center lg:col-span-2 lg:flex-row bg-white p-3 shadow-xl" style={props1}>
+          return (<div className="grid-cols-7 gap-4 lg:grid">
+            <animated.div className="flex flex-col item-center lg:col-span-4 lg:flex-row bg-white p-3 shadow-xl" style={props1}>
               <div className="flex justify-center item-center lg:flex-col">
                 <img className="border border-cdpurple rounded-full m-5 shadow-xl max-w-xs max-h-80" src={pp} alt="profile pic" />
               </div>
               <div className="flex flex-col justify-center">
                 <div className="text-cdpurple text-2xl text-center font-semibold">Présentation</div>
                 <div className='text-cgray text-lg text-center'>
-                  <p className="m-1">Étudiant en licence MIASHS, je suis passionné par les mathématiques et l'informatique.</p>
-                  <p className="m-1">L'enseignement des Sciences-Cognitives me permet de voir au delà des applications usuelles de l'informatique en adaptant au maximum la machine à l'Homme.</p>
+                  <p className="m-1">La licence Mathématiques et Informatique Appliquées aux Sciences Humaines et Sociales (MIASHS) de l'université de Lille m'a apporté de solide fondation en mathématique tout en améliorant mes compétences en informatique. De plus, la collecte et l'analyse de données humaine devenant de plus en plus complexe, l'enseignement des Sciences-Cognitives me permet de rapidement identifier l'information utile parmi ces données.</p>
+                  <p className="m-1 mt-3">Après cette licence axée mathématique, j'ai choisi de me spécialiser dans le domaine de la data au travers du Master Données, Apprentissage, Connaissances (DAC) de la Sorbonne. En effet celui propose un bon mix entre les enseignements de mathématiques, de base de données et de data science permettant de nombreux débouchés.
+</p>
                 </div>
               </div>
             </animated.div>
 
-            <animated.div className="flex flex-col justify-center item-center bg-white mt-10 p-3 shadow-xl" style={props2}>
+            <animated.div className="flex flex-col item-center bg-white p-3 shadow-xl lg:col-span-2" style={props2}>
               <div className="text-cdpurple text-2xl text-center font-semibold">Centre d'intérêt</div>
-              <div className='text-cgray text-lg text-center'>
+              <div className='text-cgray text-lg text-center '>
                 <p className="m-1">Durant mon temps libre j'approfondis mes connaissances en informatique par de nombreux projets.</p>
                 <p className="m-1">Je fais de l'escalade et de la course à pied depuis plusieurs années.
                   Écologiste, j'ai déjà pratiqué la permaculture et essaye de limiter mon impact environnemental au quotidien.
@@ -99,6 +110,37 @@ const Presentation = () => {
                 <div className="flex justify-center flex-wrap">
                   {["Escalade", "Course à pied", "Permaculture", 'Cryptomonnaies', 'Blockchain'].map(
                     (keyword, index) => (<span className="border rounded-lg m-1 p-1 whitespace-nowrap shadow-md" key={index}>{keyword}</span>))}
+                </div>
+              </div>
+            </animated.div>
+
+            <animated.div className="flex flex-col item-center bg-white p-3 shadow-xl" style={props3}>
+              <div className="text-cdpurple text-2xl text-center font-semibold">Lien utile</div>
+              <div className="flex flex-col justify-center items-center flex-grow">
+                <div className="grid grid-flow-row text-cgray text-lg text-center ">
+                  <div className='grid grid-cols-2'>
+                    <a href={english_cv_pdf} target="_blank" rel="noreferrer" className="border rounded-lg m-1 p-5 lg:p-3 shadow-md">English CV</a>
+                    <a href={french_cv_pdf} target="_blank" rel="noreferrer" className="border rounded-lg m-1 p-5 lg:p-3 shadow-md">French CV</a>
+                  </div>
+                  <a href="https://github.com/CharlesAttend" title="GitHub" target="_blank" rel="noopener noreferrer">
+                    <div className="border rounded-lg m-1 p-1 whitespace-nowrap shadow-md grid grid-cols-4">
+                      <i className="fab fa-github fa-2x text-cpurple text-center w-30"></i>
+                      <div className="text-cgray text-lg col-span-3 flex items-center justify-center">@CharlesAttend</div>
+                    </div>
+                  </a>
+                  <a href="https://www.linkedin.com/in/charles-vin/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <div className="border rounded-lg m-1 p-1 whitespace-nowrap shadow-md grid grid-cols-4 lg:flex-col-reverse">
+                      <i className="fab fa-linkedin fa-2x text-cpurple text-center w-30"></i>
+                      <div className="text-cgray text-lg col-span-3 flex items-center justify-center">Charles Vin</div>
+                    </div>
+                  </a>
+                  <div className="border rounded-lg m-1 p-1 whitespace-nowrap shadow-md grid grid-cols-4 lg:flex-col-reverse">
+                    <i className="fas fa-envelope-square fa-2x text-cpurple text-center w-30 flex items-center justify-center"></i>
+                    <div className="col-span-3 flex items-center justify-center lg:flex-col ">
+                      <span className="text-cgray text-lg lg:text-sm">charles.vin@outlook.fr</span>
+                      <i className='fas fa-clipboard-list fa-2xs border-2 rounded-lg p-1 m-1 text-cgray' onClick={(e) => copyToClipboard(e, 'charles.vin@outlook.fr')}></i>
+                    </div>
+                  </div>
                 </div>
               </div>
             </animated.div>
@@ -125,43 +167,6 @@ const Projet = () => (
     </div>
   </section>
 )
-
-const SocialLink = () => {
-  return (<section className="h-screen lg:h-96 bg-white">
-    <div className="flex flex-col items-center h-full justify-evenly ">
-      <span className="text-cdpurple text-4xl font-semibold">Contact</span>
-      <div className="w-10/12 lg:no-flex grid gap-5 grid-row-4 sm:gap-10 lg:grid-row-none lg:grid-cols-4  xl:gap-32 " >
-          <div className="flex items-center justify-between  lg:flex-col-reverse lg:bg-gray-50 lg:p-6 lg:h-full">
-            <div className="lg:flex flex-col-reverse items-center">
-              <span className="text-cgray text-lg">charles.vin@outlook.fr</span>
-              <i className='fas fa-clipboard-list fa-lg border-2 rounded-lg p-2 m-1 text-cgray' onClick={(e) => copyToClipboard(e,'charles.vin@outlook.fr')}></i>
-            </div>
-            <i className="fas fa-envelope-square fa-5x text-cpurple text-center w-20"></i>
-          </div>
-          <a href="https://github.com/CharlesAttend" title="GitHub" target="_blank" rel="noopener noreferrer">
-            <div className="flex items-center justify-between  lg:flex-col-reverse lg:bg-gray-50 lg:p-6 lg:h-full">
-                <span className="text-cgray text-lg">@CharlesAttend</span>
-                <i className="fab fa-github fa-5x text-cpurple text-center w-20"></i>
-            </div>
-          </a>
-          <a href="https://www.linkedin.com/in/charles-vin/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-            <div className="flex items-center justify-between  lg:flex-col-reverse lg:bg-gray-50 lg:p-6 lg:h-full">
-                <span className="text-cgray text-lg">Charles Vin</span>
-                <i className="fab fa-linkedin fa-5x text-cpurple text-center w-20"></i>
-            </div>
-          </a>
-          <div className="flex items-center justify-between  lg:flex-col-reverse lg:bg-gray-50 lg:p-6 lg:h-full" >
-            <div className="lg:flex flex-col-reverse items-center">
-              <span className="text-cgray text-lg">07-79-49-56-52</span>
-              <i className='fas fa-clipboard-list fa-lg border-2 rounded-lg p-2 m-1 text-cgray' onClick={(e) => copyToClipboard(e,'0779495652')}></i>
-            </div>
-            <i className="fas fa-mobile-alt fa-5x text-cpurple text-center w-20"></i>
-          </div>
-      </div>
-    </div>
-  </section>
-  )
-}
 
 const copyToClipboard = (event, text) => {
   navigator.clipboard.writeText(text).then(() => {
