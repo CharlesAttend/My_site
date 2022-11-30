@@ -9,7 +9,7 @@ import CarouselComponent from './CarouselComponent'
 
 import pp from './img/pp.jpg'
 import english_cv_pdf from './document/generic_english_CV_compressed.pdf'
-import french_cv_pdf from './document/generic_english_CV_compressed.pdf'
+import french_cv_pdf from './document/generic_french_CV_compressed.pdf'
 
 
 const App = () => {
