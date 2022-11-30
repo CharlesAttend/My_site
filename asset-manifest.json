@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.92307357.css",
-    "main.js": "/static/js/main.e5a6054b.js",
+    "main.js": "/static/js/main.787d2546.js",
     "static/js/787.66f03ae4.chunk.js": "/static/js/787.66f03ae4.chunk.js",
     "static/media/pp.jpg": "/static/media/pp.ebaab878f47bd440cc18.jpg",
-    "static/media/generic_french_CV_compressed.pdf": "/static/media/generic_french_CV_compressed.1a569b5a280a61654465.pdf",
     "static/media/generic_english_CV_compressed.pdf": "/static/media/generic_english_CV_compressed.729dbfbb8065e17ecd3f.pdf",
+    "static/media/generic_french_CV_compressed.pdf": "/static/media/generic_french_CV_compressed.21a603aa8fe86bd3d4fd.pdf",
     "static/media/chili.jpg": "/static/media/chili.d9facda47d8799481722.jpg",
     "static/media/monte-carlo-pi.png": "/static/media/monte-carlo-pi.6fa2e4ce08887d39819b.png",
     "static/media/Stage L2.md": "/static/media/Stage L2.32d66a2705802daba444.md",
@@ -24,11 +24,11 @@
     "static/media/Notion GCalendar Sync.md": "/static/media/Notion GCalendar Sync.4f4c9f0c7c65c4fcd1bc.md",
     "static/media/My organisation.md": "/static/media/My organisation.27806a4f5ca198727ef1.md",
     "main.92307357.css.map": "/static/css/main.92307357.css.map",
-    "main.e5a6054b.js.map": "/static/js/main.e5a6054b.js.map",
+    "main.787d2546.js.map": "/static/js/main.787d2546.js.map",
     "787.66f03ae4.chunk.js.map": "/static/js/787.66f03ae4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.92307357.css",
-    "static/js/main.e5a6054b.js"
+    "static/js/main.787d2546.js"
   ]
 }
