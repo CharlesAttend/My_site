@@ -1,6 +1,6 @@
 <script>
-  import LandingPage from "$lib/sections/landingPage.svelte";
-  import Me from "$lib/sections/me.svelte";
+  import LandingPage from "$lib/sections/LandingPage.svelte";
+  import Me from "$lib/sections/Me.svelte";
   export let data;
   console.log(data);
 </script>
