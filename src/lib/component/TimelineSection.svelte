@@ -7,7 +7,7 @@
 
 <li class="mb-10 ml-4">
   <div
-    class="absolute w-3 h-3 bg-sapphire rounded-full mt-1.5 -left-1.5 border border-white"
+    class="absolute w-3 h-3 bg-mauve rounded-full mt-1.5 -left-1.5 border border-white"
   />
   <small class="mb-1"><time>{date}</time></small>
   <h3 class="text-lg font-semibold">

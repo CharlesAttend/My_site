@@ -23,7 +23,7 @@
 
 <div class="">
   <h2 class="text-center">Experiences</h2>
-  <ol class="m-2.5 relative border-l border-sapphire dark:border-gray-700">
+  <ol class="m-2.5 relative border-l border-mauve dark:border-gray-700">
     {#each timelines as timeline}
       <TimelineSection {...timeline} />
     {/each}
