@@ -3,7 +3,7 @@
 >
   <div class="justify-center items-center inline-flex">
     <div
-      class="self-stretch p-2.5 shadow-xl border border-mauve border-sapphire flex-col justify-center items-center gap-2.5 inline-flex"
+      class="self-stretch p-2.5 shadow-xl border-2 border-mauve border-sapphire flex-col justify-center items-center gap-2.5 inline-flex"
       id="animate-border"
     >
       <h1>Charles Vin</h1>
