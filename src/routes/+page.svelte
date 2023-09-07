@@ -5,4 +5,7 @@
   console.log(data);
 </script>
 
-<LandingPage />
+<div class="bg-base text-text px-2.5">
+  <LandingPage />
+  <Me />
+</div>
