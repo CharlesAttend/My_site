@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* display small */
+  h1 {
+    @apply text-4xl font-normal leading-10;
+  }
+
+  /* headline small */
+  h2 {
+    @apply text-2xl font-normal;
+  }
+
+  /* title small */
+  h3 {
+    @apply text-sm font-medium;
+  }
+
+  /* body small */
+  p {
+    @apply text-xs font-normal leading-4;
+  }
+
+  /* label small */
+  small {
+    @apply text-[11px] font-normal leading-4;
+  }
+
+  /* 
+    ┌───────────────────────────────────────────────────────────────────────────┐
+    │   TODO                                                                    │
+    └───────────────────────────────────────────────────────────────────────────┘
+ */
+  @media screen(lg) {
+    /* display large */
+    h1 {
+      @apply text-4xl font-normal leading-10;
+    }
+
+    /* headline large */
+    h2 {
+      @apply text-2xl font-normal;
+    }
+
+    /* title large */
+    h3 {
+      @apply text-sm font-medium;
+    }
+
+    /* body large */
+    p {
+      @apply text-xs font-normal;
+    }
+
+    /* label large */
+    small {
+      @apply text-[11px] font-normal;
+    }
+  }
+}
