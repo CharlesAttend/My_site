@@ -19,15 +19,13 @@
 
 <div class="w-full flex-col justify-center items-center gap-2.5 inline-flex">
   <img class="p-20 max-w-sm rounded-full" src={pp} alt="Profile picture" />
-  <div class="inline-flex flex-col gap-5 w-full p-2.5">
-    <h2 class="self-center">Usefull links</h2>
-    <div class=" gap-5 inline-flex flex-col w-full">
-      {#each link_list as link}
-        <a href={link.href} class="flex gap-5">
-          <img src={link.img} alt={link.alt} />
-          <p>{link.text}</p>
-        </a>
-      {/each}
-    </div>
+  <h2 class="text-center">Usefull links</h2>
+  <div class=" gap-5 inline-flex flex-col w-full">
+    {#each link_list as link}
+      <a href={link.href} class="flex gap-5">
+        <img src={link.img} alt={link.alt} />
+        <p>{link.text}</p>
+      </a>
+    {/each}
   </div>
 </div>
