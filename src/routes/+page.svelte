@@ -3,13 +3,17 @@
   import Me from "$lib/sections/Me.svelte";
   import Education from "$lib/sections/Education.svelte";
   import Experiences from "$lib/sections/Experiences.svelte";
+  import Sports from "$lib/sections/Sports.svelte";
+  import { setContext } from "svelte";
+
   export let data;
-  console.log(data);
+  setContext("stats", data.stats);
 </script>
 
-<div class="bg-base text-text px-2.5">
+<div class="bg-base px-2.5 text-text">
   <LandingPage />
   <Me />
   <Education />
   <Experiences />
+  <Sports />
 </div>

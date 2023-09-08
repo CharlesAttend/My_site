@@ -1,31 +1,34 @@
-import puppeteer from "puppeteer";
+import { STRAVA_ACCESS_TOKEN } from "$env/static/private";
 
-const getStats = async () => {
-  // Launch the browser and open a new blank page
-  const browser = await puppeteer.launch({ headless: "new" });
-  const page = await browser.newPage();
+function fetchAthleteStats() {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const response = await fetch(
+        "https://www.strava.com/api/v3/athletes/86960565/stats",
+        {
+          headers: {
+            Authorization: `Bearer ${STRAVA_ACCESS_TOKEN}`,
+          },
+        },
+      );
 
-  // Navigate the page to a URL
-  await page.goto("https://www.strava.com/athletes/86960565");
+      if (!response.ok) {
+        throw new Error("Failed to fetch athlete stats");
+      }
 
-  // Set screen size
-  await page.setViewport({ width: 1080, height: 1024 });
-  // const searchResultSelector = ".MonthlyStats--currMonthStats--OiHnr .Stat--statValue--7eWuL";
-  const searchResultSelector = `[class*="MonthlyStats--currMonthStats--"]`;
-  const elements = await page.waitForSelector(searchResultSelector);
-  const childrenText = await elements.$$eval(
-    `[class*="Stat--statValue--"]`,
-    (element) => {
-      return element.map((li) => li.textContent.trim());
-    },
-  );
-  console.log("Content inside <li> elements:", childrenText);
-  await browser.close();
-  return childrenText;
-};
+      const data = await response.json();
+      const stats = [
+        { label: "Distance", number: data.recent_run_totals.distance },
+        { label: "Moving Time", number: data.recent_run_totals.count },
+      ];
+      resolve(stats);
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
 
-/** @type {import('./$types').PageLoad} */
+/** @type {import('./$types').PageServerLoad} */
 export async function load() {
-  const childrenText = await getStats();
-  return { km: childrenText[0], time: childrenText[1] };
+  return { stats: fetchAthleteStats() };
 }
