@@ -18,8 +18,16 @@ function fetchAthleteStats() {
 
       const data = await response.json();
       const stats = [
-        { label: "Distance", number: data.recent_run_totals.distance },
-        { label: "Moving Time", number: data.recent_run_totals.count },
+        {
+          label: "Distance",
+          unit: "km",
+          number: data.recent_run_totals.distance,
+        },
+        {
+          label: "Moving Time",
+          unit: " min",
+          number: data.recent_run_totals.elapsed_time,
+        },
       ];
       resolve(stats);
     } catch (error) {
