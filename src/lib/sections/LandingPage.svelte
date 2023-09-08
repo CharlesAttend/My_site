@@ -1,9 +1,9 @@
 <div
-  class="p-2.5 h-screen w-screen flex-col justify-center items-center gap-2.5 inline-flex"
+  class="inline-flex h-screen w-full flex-col items-center justify-center gap-2.5 p-2.5"
 >
-  <div class="justify-center items-center inline-flex">
+  <div class="inline-flex items-center justify-center">
     <div
-      class="self-stretch p-2.5 shadow-xl border-2 border-mauve border-sapphire flex-col justify-center items-center gap-2.5 inline-flex"
+      class="inline-flex flex-col items-center justify-center gap-2.5 self-stretch border-2 border-mauve border-sapphire p-2.5 shadow-xl"
       id="animate-border"
     >
       <h1>Charles Vin</h1>
