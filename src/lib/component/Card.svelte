@@ -2,7 +2,7 @@
   export let img;
   export let alt = "";
   export let title;
-  export let text = "See more";
+  export let text = "";
 
   let showmore = false;
 </script>
@@ -12,6 +12,7 @@
 >
   <img class="m-2.5 h-1/3" src={img} {alt} />
   <h3>{title}</h3>
+
   <p>{text}</p>
 </div>
 
