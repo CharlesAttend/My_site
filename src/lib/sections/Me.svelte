@@ -21,7 +21,7 @@
   class="inline-flex w-full flex-col items-center justify-center gap-2.5 overflow-hidden"
 >
   <img
-    class="w-2/3 max-w-sm rounded-full border-2 border-sapphire"
+    class="w-2/3 max-w-sm rounded-full border-2 border-sapphire shadow-lg"
     src={pp}
     alt="Me"
   />
