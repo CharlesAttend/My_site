@@ -28,6 +28,6 @@
       title="Last 4 weeks"
       subtitle="Total Activities"
       text="Scrapped from Strava"
-    ></StatsCard>
+    />
   </div>
 </div>
