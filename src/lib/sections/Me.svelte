@@ -17,10 +17,16 @@
   ];
 </script>
 
-<div class="w-full flex-col justify-center items-center gap-2.5 inline-flex">
-  <img class="p-20 max-w-sm rounded-full" src={pp} alt="Profile picture" />
+<div
+  class="inline-flex w-full flex-col items-center justify-center gap-2.5 overflow-hidden"
+>
+  <img
+    class="w-2/3 max-w-sm rounded-full border-2 border-sapphire"
+    src={pp}
+    alt="Me"
+  />
   <h2 class="text-center">Usefull links</h2>
-  <div class=" gap-5 inline-flex flex-col w-full">
+  <div class=" inline-flex w-full flex-col gap-5">
     {#each link_list as link}
       <a href={link.href} class="flex gap-5">
         <img src={link.img} alt={link.alt} />
