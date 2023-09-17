@@ -21,7 +21,7 @@
 
   <!-- svelte-ignore a11y-autofocus -->
   <button
-    class="absolute bottom-0 right-0 m-2 rounded-full border border-red bg-surface0 p-5 shadow-xl"
+    class="absolute bottom-0 right-0 m-2 rounded-full border border-red bg-surface0 p-5 shadow-xl hover:bg-surface1"
     autofocus
     on:click={() => dialog.close()}
   >
