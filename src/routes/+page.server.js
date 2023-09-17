@@ -52,7 +52,7 @@ function fetchAthleteStats() {
           // Token expired; refresh it
           await refreshAccessToken();
           // Retry the request with the new access token
-          return fetchAthleteStats();
+          resolve(fetchAthleteStats());
         }
         throw new Error("Failed to fetch athlete stats");
       } else {
