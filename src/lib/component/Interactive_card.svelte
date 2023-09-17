@@ -3,7 +3,6 @@
   export let alt = "";
   export let title;
   export let text = "";
-  export let url = "";
   import Modal from "$lib/component/Modal.svelte";
 
   let showModal = false;
