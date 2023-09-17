@@ -26,15 +26,17 @@
   };
 </script>
 
-<svelte:component
-  this={ParticlesComponent}
-  id="tsparticles"
-  class="relative h-screen w-full bg-base"
-  style=""
-  options={particlesConfig}
-  on:particlesLoaded={onParticlesLoaded}
-  {particlesInit}
-/>
+<div class="relative h-screen w-full bg-base">
+  <svelte:component
+    this={ParticlesComponent}
+    id="tsparticles"
+    class="h-full w-full"
+    style=""
+    options={particlesConfig}
+    on:particlesLoaded={onParticlesLoaded}
+    {particlesInit}
+  />
+</div>
 
 <div
   class="absolute right-0 top-0 inline-flex h-screen w-full flex-col items-center justify-center gap-2.5 p-2.5"
