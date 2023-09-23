@@ -3,26 +3,31 @@
 </script>
 
 <h2 class="m-5 text-center">Project Spotlight</h2>
-<div>
+<div class="inline-flex flex-col items-center gap-2">
   <div class="grid w-full grid-rows-3 gap-2">
     <ProjectCard
       title="Neural Network DIY"
       text="Sit esse excepteur eu aute. Occaecat officia irure esse veniam dolore nisi. Laborum amet irure elit nulla velit voluptate. Voluptate velit minim irure ex."
+      badges={["Mathematics", "Numpy", "Neural Networks"]}
     />
 
     <ProjectCard
       title="Neural Network DIY"
       text="Sit esse excepteur eu aute. Occaecat officia irure esse veniam dolore nisi. Laborum amet irure elit nulla velit voluptate. Voluptate velit minim irure ex."
+      ,
+      badges={["Lorem", "Ipsum", "Occaecat"]}
     />
 
     <ProjectCard
       title="Neural Network DIY"
       text="Sit esse excepteur eu aute. Occaecat officia irure esse veniam dolore nisi. Laborum amet irure elit nulla velit voluptate. Voluptate velit minim irure ex."
+      ,
+      badges={["Officia", "Irure", "Esse"]}
     />
   </div>
   <a
     href="#"
-    class="w-full items-center rounded-lg border border-gray-200 bg-white px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:text-blue-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:inline-flex dark:border-gray-600 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
+    class="inline-flex items-center rounded-lg border border-gray-200 bg-white px-4 py-2 text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:text-blue-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
   >
     <p>See more</p>
     <svg

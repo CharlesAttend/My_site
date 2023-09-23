@@ -21,14 +21,17 @@
   class="inline-flex w-full flex-col items-center justify-center gap-2.5 overflow-hidden"
 >
   <img
-    class="w-2/3 max-w-sm rounded-full border-2 border-sapphire shadow-lg"
+    class="w-2/3 max-w-sm rounded-full border border-sapphire shadow-lg"
     src={pp}
     alt="Me"
   />
   <h2 class="text-center">Usefull links</h2>
   <div class=" inline-flex w-full flex-col gap-5">
     {#each link_list as link}
-      <a href={link.href} class="flex gap-5">
+      <a
+        href={link.href}
+        class="flex w-min items-center gap-5 hover:bg-surface0"
+      >
         <img src={link.img} alt={link.alt} />
         <p>{link.text}</p>
       </a>
