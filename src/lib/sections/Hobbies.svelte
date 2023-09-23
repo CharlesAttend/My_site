@@ -6,7 +6,7 @@
 </script>
 
 <h2 class="m-5 text-center">Hobbies</h2>
-<div class="grid grid-cols-2 grid-rows-2 gap-5">
+<div class="grid w-full grid-cols-2 grid-rows-2 gap-5">
   <div class="">
     <Interactive_card
       title="Cooking"

@@ -3,6 +3,7 @@
   import Me from "$lib/sections/Me.svelte";
   import Education from "$lib/sections/Education.svelte";
   import Experiences from "$lib/sections/Experiences.svelte";
+  import Projets from "$lib/sections/Projects.svelte";
   import Sports from "$lib/sections/Sports.svelte";
   import { setContext } from "svelte";
   import Hobbies from "$lib/sections/Hobbies.svelte";
@@ -11,11 +12,12 @@
   setContext("stats", data.stats);
 </script>
 
-<div class="bg-base px-2.5 text-text">
+<div class="inline-flex grow flex-col items-center bg-base px-2.5 text-text">
   <LandingPage />
   <Me />
   <Education />
   <Experiences />
+  <Projets />
   <Sports />
   <Hobbies />
 </div>
