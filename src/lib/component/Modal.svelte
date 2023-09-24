@@ -9,7 +9,7 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
 <dialog
-  class=" w-11/12 max-w-lg rounded border border-sapphire bg-base text-text"
+  class=" border-mauve-300 w-11/12 max-w-lg rounded border bg-base text-text"
   bind:this={dialog}
   on:close={() => (showModal = false)}
   on:click|self={() => dialog.close()}
@@ -21,11 +21,10 @@
 
   <!-- svelte-ignore a11y-autofocus -->
   <button
-    class="absolute bottom-0 right-0 m-2 rounded-full border border-red bg-surface0 p-5 shadow-xl hover:bg-surface1"
-    autofocus
+    class="absolute bottom-0 right-0 m-2 rounded-full bg-red-700 p-3 text-sm font-medium text-white hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
     on:click={() => dialog.close()}
   >
-    <img src={cross} class="h-6" alt="close" />
+    <img src={cross} class="h-10" alt="close" />
   </button>
 </dialog>
 
