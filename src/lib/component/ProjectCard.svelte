@@ -17,7 +17,7 @@
     <div>
       {#each badges as badge_text}
         <small
-          class="bg-sapphire-100 text-sapphire-800 dark:bg-sapphire-900 dark:text-sapphire-300 mr-2 rounded-full px-2.5 py-0.5 text-center"
+          class="bg-mauve-100 text-mauve-800 dark:bg-mauve-900 dark:text-mauve-300 mr-2 rounded-full px-2.5 py-0.5 text-center"
         >
           {badge_text}
         </small>
