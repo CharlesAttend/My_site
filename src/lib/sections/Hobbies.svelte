@@ -6,8 +6,10 @@
 </script>
 
 <h2 class="m-5 text-center">Hobbies</h2>
-<div class="grid w-full grid-cols-2 grid-rows-2 gap-5">
-  <div class="">
+<div
+  class="grid w-full max-w-xl grid-cols-2 grid-rows-2 gap-5 sm:max-w-sm lg:max-w-lg xl:max-w-xl"
+>
+  <div class="aspect-square">
     <Interactive_card
       title="Cooking"
       img={cooking}
@@ -25,7 +27,7 @@
       </ul>
     </Interactive_card>
   </div>
-  <div>
+  <div class="aspect-square">
     <Interactive_card
       title="Gardening"
       img={plant}

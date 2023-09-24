@@ -12,8 +12,10 @@
   setContext("stats", data.stats);
 </script>
 
-<div class="inline-flex grow flex-col items-center bg-base px-2.5 text-text">
-  <LandingPage />
+<LandingPage />
+<div
+  class="inline-flex grow flex-col items-center bg-base px-2.5 text-text xl:px-[32rem]"
+>
   <Me />
   <Education />
   <Experiences />

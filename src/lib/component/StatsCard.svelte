@@ -15,9 +15,9 @@
     {:then stats}
       {#each stats as stat}
         <div class="flex flex-col items-center justify-center">
-          <h1 class="m-2.5 flex h-1/3 items-center gap-1">
+          <h2 class="m-2.5 flex h-1/3 items-center gap-1">
             {stat.number} <small class="self-end">{stat.unit}</small>
-          </h1>
+          </h2>
 
           <h3>{stat.label}</h3>
         </div>

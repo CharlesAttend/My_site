@@ -28,10 +28,7 @@
   <h2 class="text-center">Usefull links</h2>
   <div class=" inline-flex w-full flex-col gap-5">
     {#each link_list as link}
-      <a
-        href={link.href}
-        class="flex w-min items-center gap-5 hover:bg-surface0"
-      >
+      <a href={link.href} class="flex items-center gap-5 hover:bg-surface0">
         <img src={link.img} alt={link.alt} />
         <p>{link.text}</p>
       </a>
