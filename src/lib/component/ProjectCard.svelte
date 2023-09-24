@@ -6,7 +6,7 @@
 </script>
 
 <a
-  class="inline-flex w-full items-center gap-2 rounded-xl border p-2 shadow-md transition delay-75 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105"
+  class="inline-flex w-full items-center gap-2 rounded-xl border p-2 shadow-md transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105"
   href={link}
 >
   <div>
