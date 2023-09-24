@@ -6,7 +6,7 @@
 </script>
 
 <div
-  class="inline-flex h-full w-full flex-col items-center justify-center gap-2.5 border-2 border-mauve shadow-xl"
+  class="border-mauve-300 inline-flex h-full w-full flex-col items-center justify-center gap-2.5 rounded-xl border shadow-lg"
 >
   <h3>{title}</h3>
   <div class="flex w-full justify-evenly">

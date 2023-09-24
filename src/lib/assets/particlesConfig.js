@@ -2,9 +2,7 @@ const ParticlesParam = {
   fullScreen: { enable: false, zIndex: 0 },
   background: {
     color: {
-      // value: "#202124",
-      // value: "#F4F9E9",
-      value: "#eff1f5",
+      value: "#eff1f5", // Base
     },
   },
   fpsLimit: 60,
@@ -38,7 +36,8 @@ const ParticlesParam = {
   },
   particles: {
     color: {
-      value: "#209fb5",
+      // value: "#209fb5", // Sapphire
+      value: "#8839ef", // Mauve
     },
     links: {
       color: "#209fb5",

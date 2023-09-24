@@ -6,7 +6,7 @@
 </script>
 
 <a
-  class="inline-flex w-full items-center gap-2 rounded-xl border p-2 shadow-md transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105"
+  class="border-mauve-300 inline-flex w-full items-center gap-2 rounded-xl border p-2 shadow-md transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105"
   href={link}
 >
   <div>
@@ -17,7 +17,7 @@
     <div>
       {#each badges as badge_text}
         <small
-          class="mr-2 rounded-full bg-[#c9eff5] px-2.5 py-0.5 text-[#104f5a] dark:bg-[#0a3036] dark:text-[#81d9e9]"
+          class="bg-sapphire-100 text-sapphire-800 dark:bg-sapphire-900 dark:text-sapphire-300 mr-2 rounded-full px-2.5 py-0.5 text-center"
         >
           {badge_text}
         </small>
@@ -29,7 +29,7 @@
       class="h-3 w-3"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
-      fill="none"
+      fill="#40a02b"
       viewBox="0 0 14 10"
     >
       <path

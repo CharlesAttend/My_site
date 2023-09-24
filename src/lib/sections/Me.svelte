@@ -18,19 +18,17 @@
 </script>
 
 <div
-  class="inline-flex w-full flex-col items-center justify-center gap-2.5 overflow-hidden"
+  class="my-5 inline-flex w-full flex-col items-center justify-center gap-2.5 overflow-hidden"
 >
-  <img
-    class="w-2/3 max-w-sm rounded-full border border-sapphire shadow-lg"
-    src={pp}
-    alt="Me"
-  />
-  <h2 class="text-center">Usefull links</h2>
-  <div class=" inline-flex w-full flex-col gap-5">
+  <img class="w-2/3 max-w-sm rounded-full shadow-lg" src={pp} alt="Me" />
+  <!-- <h2 class="text-center">Usefull links</h2> -->
+  <div class="grid w-full grid-cols-4 justify-items-center gap-5">
     {#each link_list as link}
-      <a href={link.href} class="flex items-center gap-5 hover:bg-surface0">
-        <img src={link.img} alt={link.alt} />
-        <p>{link.text}</p>
+      <a
+        href={link.href}
+        class="text-mauve-900 hover:bg-mauve-100 focus:ring-mauve-200 dark:-mauve-600 dark:bg-mauve-800 dark:hover:bg-mauve-700 dark:focus:ring-mauve-700 inline-flex items-center rounded-lg px-4 py-2 hover:text-blue-700 focus:z-10 focus:text-blue-700 focus:outline-none focus:ring-4 dark:hover:text-white"
+      >
+        <img class="w-6 lg:w-7 xl:w-8" src={link.img} alt={link.alt} />
       </a>
     {/each}
   </div>
