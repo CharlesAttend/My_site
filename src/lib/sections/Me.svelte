@@ -26,7 +26,7 @@
     {#each link_list as link}
       <a
         href={link.href}
-        class="text-mauve-900 hover:bg-mauve-100 focus:ring-mauve-200 dark:-mauve-600 dark:bg-mauve-800 dark:hover:bg-mauve-700 dark:focus:ring-mauve-700 inline-flex items-center rounded-lg px-4 py-2 hover:text-blue-700 focus:z-10 focus:text-blue-700 focus:outline-none focus:ring-4 dark:hover:text-white"
+        class="inline-flex items-center rounded-lg px-4 py-2 text-mauve-900 hover:bg-mauve-100 hover:text-blue-700 focus:z-10 focus:text-blue-700 focus:outline-none focus:ring-4 focus:ring-mauve-200"
       >
         <img class="w-7 lg:w-8 xl:w-9" src={link.img} alt={link.alt} />
       </a>

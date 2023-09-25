@@ -10,7 +10,7 @@
 > -->
 <a
   href={link}
-  class="border-mauve-200 hover:bg-mauve-100 focus:ring-mauve-200 dark:border-mauve-600 dark:bg-mauve-800 dark:hover:bg-mauve-700 dark:focus:ring-mauve-700 hover:text-mauve-800 focus:text-mauve-800 inline-flex items-center rounded-lg border px-4 py-2 text-text focus:z-10 focus:outline-none focus:ring-4 dark:hover:text-white"
+  class="inline-flex items-center rounded-lg border border-mauve-200 px-4 py-2 text-text hover:bg-mauve-100 hover:text-mauve-800 focus:z-10 focus:text-mauve-800 focus:outline-none focus:ring-4 focus:ring-mauve-200"
 >
   <small>{text}</small>
   {#if arrow}
