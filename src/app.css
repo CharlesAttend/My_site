@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ul {
+    @apply list-inside list-disc;
+  }
+  /* display small */
+  h1 {
+    @apply text-4xl font-normal leading-10;
+  }
+
+  /* headline small */
+  h2 {
+    @apply text-2xl font-normal;
+  }
+
+  /* title small */
+  h3 {
+    @apply text-sm font-medium;
+  }
+
+  /* body small */
+  p, ul {
+    @apply text-xs font-normal leading-4;
+  }
+
+  /* label small */
+  small {
+    @apply text-[11px] font-normal leading-4;
+  }
+
+  @media screen(lg) {
+    /* display large */
+    h1 {
+      @apply text-[45px] font-normal leading-[52px];
+    }
+
+    /* headline large */
+    h2 {
+      @apply text-[28px] font-normal leading-9;
+    }
+
+    /* title large */
+    h3 {
+      @apply text-[16px] font-medium leading-6;
+    }
+
+    /* body large */
+    p, ul {
+      @apply text-sm font-normal leading-5;
+    }
+
+    /* label large */
+    small {
+      @apply text-xs font-medium leading-4;
+    }
+  }
+
+  @media screen(xl) {
+    /* display large */
+    h1 {
+      @apply text-[57px] font-normal leading-[64px];
+    }
+
+    /* headline large */
+    h2 {
+      @apply text-[32px] font-normal leading-10;
+    }
+
+    /* title large */
+    h3 {
+      @apply text-[22px] font-normal leading-7;
+    }
+
+    /* body large */
+    p, ul {
+      @apply text-[16px] font-normal leading-6;
+    }
+
+    /* label large */
+    small {
+      @apply text-sm font-medium leading-5;
+    }
+  }
+}
+
