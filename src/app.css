@@ -19,7 +19,7 @@
   }
 
   /* body small */
-  p {
+  p, ul {
     @apply text-xs font-normal leading-4;
   }
 
@@ -45,7 +45,7 @@
     }
 
     /* body large */
-    p {
+    p, ul {
       @apply text-sm font-normal leading-5;
     }
 
@@ -72,7 +72,7 @@
     }
 
     /* body large */
-    p {
+    p, ul {
       @apply text-[16px] font-normal leading-6;
     }
 
