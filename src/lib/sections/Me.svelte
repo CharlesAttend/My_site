@@ -28,7 +28,7 @@
 </script>
 
 <div
-  class="my-5 inline-flex w-full flex-col items-center justify-center gap-2.5 overflow-hidden"
+  class="my-5 inline-flex w-full flex-col items-center justify-center gap-2.5 overflow-hidden sm:max-w-xl"
 >
   <img class="w-2/3 max-w-sm rounded-full shadow-lg" src={pp} alt="Me" />
   <!-- <h2 class="text-center">Usefull links</h2> -->
