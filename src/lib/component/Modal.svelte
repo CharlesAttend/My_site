@@ -9,11 +9,12 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-noninteractive-element-interactions -->
 <dialog
-  class=" border-mauve-300 w-11/12 max-w-lg rounded border bg-base text-text"
+  class=" w-11/12 max-w-lg rounded border border-mauve-300 bg-base text-text"
   bind:this={dialog}
   on:close={() => (showModal = false)}
   on:click|self={() => dialog.close()}
 >
+  <button></button>
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div on:click|stopPropagation class=" h-[90vh] p-4">
     <slot />
