@@ -9,7 +9,7 @@
 </script>
 
 <button
-  class="border-mauve-300 inline-flex h-full w-full flex-col items-center justify-center rounded-xl border shadow-lg"
+  class="inline-flex h-full w-full flex-col items-center justify-center rounded-xl border border-mauve-300 shadow-lg transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105"
   on:click={() => (showModal = true)}
 >
   <img class="m-2.5 h-1/3" src={img} {alt} />

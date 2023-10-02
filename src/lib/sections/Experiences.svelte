@@ -1,29 +1,27 @@
 <script>
   import TimelineSection from "$lib/component/TimelineSection.svelte";
+  import Filboost from "$lib/contents/en/experiences/Filboost.svelte";
+  import PLDAC from "$lib/contents/en/experiences/PLDAC.svelte";
+
   const timelines = [
     {
-      title: "Oui oui oui",
-      date: "22 Aout",
-      text: "Veniam mollit sint elit consequat nulla proident ex magna id occaecat enim dolor nisi. Anim ex nisi consectetur reprehenderit ut consectetur anim proident veniam exercitation incididunt. Velit aliqua esse veniam ullamco eu proident non ipsum mollit ea sunt fugiat in ipsum. Proident consequat consectetur sunt adipisicing irure nisi tempor laboris laborum non sint voluptate cupidatat magna. Fugiat voluptate adipisicing reprehenderit duis eiusmod cupidatat.",
-      current: true,
+      title: "Research project - Explainable insects classification",
+      date: "01/2023 - 06/2023",
+      type_place: "Sorbonne University",
+      textComponent: PLDAC,
     },
     {
-      title: "Oui oui oui",
-      date: "22 Aout",
-      text: "Elit occaecat culpa eiusmod occaecat sit. Esse sint mollit cupidatat laborum eu sint cupidatat laboris tempor. Ad enim ullamco consequat sunt incididunt commodo laboris sint duis amet.",
-    },
-    {
-      title: "Oui oui oui",
-      date: "22 Aout",
-      text: "Elit occaecat culpa eiusmod occaecat sit. Esse sint mollit cupidatat laborum eu sint cupidatat laboris tempor. Ad enim ullamco consequat sunt incididunt commodo laboris sint duis amet.",
-      current: true,
+      title: "Intership - Signal Processing and Data Analysis Internship",
+      date: "Summer 2022",
+      type_place: "Filboost x SCALAB Laboratory - Lille",
+      textComponent: Filboost,
     },
   ];
 </script>
 
-<div class="">
+<div class="w-full">
   <h2 class="text-center">Experiences</h2>
-  <ol class="m-2.5 relative border-l border-mauve dark:border-gray-700">
+  <ol class="relative m-2.5 border-l border-mauve dark:border-gray-700">
     {#each timelines as timeline}
       <TimelineSection {...timeline} />
     {/each}

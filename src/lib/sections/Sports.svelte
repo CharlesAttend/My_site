@@ -20,7 +20,7 @@
     <StatsCard
       title="Last 4 weeks"
       subtitle="Total Activities"
-      text="Scrapped from Strava"
+      text="Fetched using Strava API"
     />
   </div>
 </div>

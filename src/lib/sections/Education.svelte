@@ -1,29 +1,31 @@
 <script>
   import TimelineSection from "$lib/component/TimelineSection.svelte";
+  import DAC from "$lib/contents/en/education/DAC.svelte";
+  import MIASHS from "$lib/contents/en/education/MIASHS.svelte";
+
   const timelines = [
     {
-      title: "Oui oui oui",
-      date: "22 Aout",
-      text: "Veniam mollit sint elit consequat nulla proident ex magna id occaecat enim dolor nisi. Anim ex nisi consectetur reprehenderit ut consectetur anim proident veniam exercitation incididunt. Velit aliqua esse veniam ullamco eu proident non ipsum mollit ea sunt fugiat in ipsum. Proident consequat consectetur sunt adipisicing irure nisi tempor laboris laborum non sint voluptate cupidatat magna. Fugiat voluptate adipisicing reprehenderit duis eiusmod cupidatat.",
-      current: true,
+      title:
+        "Master's Degree in Computer Science - Specialisation Data, Machine Learning, and Knowledge (DAC)",
+      date: "2023 - 2024",
+      type_place: "Sorbonne University",
+      textComponent: DAC,
+      href: "https://dac.lip6.fr/master/description/enseignement-acc/",
     },
     {
-      title: "Oui oui oui",
-      date: "22 Aout",
-      text: "Elit occaecat culpa eiusmod occaecat sit. Esse sint mollit cupidatat laborum eu sint cupidatat laboris tempor. Ad enim ullamco consequat sunt incididunt commodo laboris sint duis amet.",
-    },
-    {
-      title: "Oui oui oui",
-      date: "22 Aout",
-      text: "Elit occaecat culpa eiusmod occaecat sit. Esse sint mollit cupidatat laborum eu sint cupidatat laboris tempor. Ad enim ullamco consequat sunt incididunt commodo laboris sint duis amet.",
-      current: true,
+      title:
+        "Bachelor's degree, Mathematics and Computer Science applied to Cognitive Science",
+      date: "2019 - 2022",
+      type_place: "University of Lille",
+      href: "https://sciences-technologies.univ-lille.fr/mathematiques/formation/licence-mention-miashs",
+      textComponent: MIASHS,
     },
   ];
 </script>
 
-<div class="">
+<div class="w-full">
   <h2 class="text-center">Education</h2>
-  <ol class="m-2.5 relative border-l border-mauve dark:border-gray-700">
+  <ol class="relative m-2.5 border-l border-mauve dark:border-gray-700">
     {#each timelines as timeline}
       <TimelineSection {...timeline} />
     {/each}

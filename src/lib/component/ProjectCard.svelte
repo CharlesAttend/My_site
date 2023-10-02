@@ -1,23 +1,22 @@
 <script>
   export let title;
-  export let text;
   export let link;
   export let badges = [];
 </script>
 
 <a
-  class="border-mauve-300 inline-flex w-full items-center gap-2 rounded-xl border p-2 shadow-md transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105"
+  class="inline-flex w-full items-center gap-2 rounded-xl border border-mauve-300 p-2 shadow-md transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-105"
   href={link}
+  target="_blank"
+  rel="noreferrer noopener"
 >
-  <div>
+  <div class="grow">
     <h3>{title}</h3>
-    <p>
-      {text}
-    </p>
+    <slot />
     <div>
       {#each badges as badge_text}
         <small
-          class="bg-mauve-100 text-mauve-800 dark:bg-mauve-900 dark:text-mauve-300 mr-2 rounded-full px-2.5 py-0.5 text-center"
+          class="mr-2 rounded-full bg-mauve-100 px-2.5 py-0.5 text-center text-mauve-800 dark:bg-mauve-900 dark:text-mauve-300"
         >
           {badge_text}
         </small>
