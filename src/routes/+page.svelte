@@ -14,7 +14,7 @@
 
 <LandingPage />
 <div
-  class="inline-flex grow flex-col items-center bg-base px-2.5 text-text xl:px-[32rem]"
+  class="inline-flex w-full grow flex-col items-center bg-base px-2.5 text-text xl:px-[32rem]"
 >
   <Me />
   <Projets />
