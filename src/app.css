@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  ul {
+    @apply list-inside list-disc;
+  }
   /* display small */
   h1 {
     @apply text-4xl font-normal leading-10;
