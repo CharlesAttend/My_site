@@ -26,7 +26,7 @@
 
     <ProjectCard
       title="More projects descriptions coming soon"
-      badges={["Comming", "Soon"]}
+      badges={["coming", "Soon"]}
       link="https://github.com/dataymeric/NeuralNetworksDIY"
     >
       <p>😉</p>
