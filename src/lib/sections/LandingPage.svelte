@@ -47,7 +47,7 @@
       id="animate-border"
     >
       <h1>Charles Vin</h1>
-      <p>M2-DAC | Sorbonne université</p>
+      <p>M2-DAC | Sorbonne university</p>
     </div>
   </div>
 </div>
