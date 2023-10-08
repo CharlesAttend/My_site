@@ -11,7 +11,7 @@
       badges={["Numpy", "Mathematics", "Neural Networks"]}
       link="https://github.com/dataymeric/NeuralNetworksDIY"
     >
-      <ul class="list-inside list-disc">
+      <ul>
         <li>Development of a neural network library entirely in Numpy</li>
         <li>
           Implementation of essential modules (linear layers, 1D convolutions,
@@ -25,14 +25,29 @@
     </ProjectCard>
 
     <ProjectCard
-      title="More projects descriptions coming soon"
-      badges={["coming", "Soon"]}
-      link="https://github.com/dataymeric/NeuralNetworksDIY"
+      title="Speaker Recognition & Sentiment analysis"
+      badges={["NLP", "Bag of word", "Unbalanced learning"]}
+      link="https://github.com/CharlesAttend/Speaker-Recognition-Sentiment-Analysis"
     >
-      <p>😉</p>
+      <ul>
+        <li>
+          Design and implementation of a natural language processing system
+          based on bag-of-words representations for speaker recognition and
+          sentiment analysis.
+        </li>
+        <li>
+          Use of textual data pre-processing and machine learning modeling
+          techniques (Naive Bayes, logistic regression, SVMs).
+        </li>
+        <li>
+          Management of class balancing and estimation of model generalization
+          performance.
+        </li>
+      </ul>
     </ProjectCard>
   </div>
   <Button
+    text="See more"
     link="https://charlesattend.notion.site/7c86cccb99a240ba8143ecd763965de5?v=c1ed913cddfb4cd1aa0feacfafcf72cb&pvs=4"
   />
 </div>
