@@ -7,7 +7,7 @@
     {
       title: "Research project - Explainable insects classification",
       date: "01/2023 - 06/2023",
-      type_place: "Sorbonne University",
+      type_place: "Sorbonne University - Paris",
       textComponent: PLDAC,
     },
     {

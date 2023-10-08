@@ -8,7 +8,7 @@
   <div class="grid w-full auto-rows-auto gap-5">
     <ProjectCard
       title="Neural Network DIY"
-      badges={["Mathematics", "Numpy", "Neural Networks"]}
+      badges={["Numpy", "Mathematics", "Neural Networks"]}
       link="https://github.com/dataymeric/NeuralNetworksDIY"
     >
       <ul class="list-inside list-disc">
@@ -32,5 +32,7 @@
       <p>😉</p>
     </ProjectCard>
   </div>
-  <Button />
+  <Button
+    link="https://charlesattend.notion.site/7c86cccb99a240ba8143ecd763965de5?v=c1ed913cddfb4cd1aa0feacfafcf72cb&pvs=4"
+  />
 </div>
