@@ -7,9 +7,6 @@
   import Sports from "$lib/sections/Sports.svelte";
   import { setContext } from "svelte";
   import Hobbies from "$lib/sections/Hobbies.svelte";
-
-  export let data;
-  setContext("stats", data.stats);
 </script>
 
 <LandingPage />

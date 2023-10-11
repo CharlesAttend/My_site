@@ -1,16 +1,18 @@
 <script>
-  import { getContext } from "svelte";
+    import { page } from "$app/stores";
   export let title;
   export let subtitle;
   export let text;
+
+  let promise = $page.data.stats;
 </script>
 
 <div
-  class="border-mauve-300 inline-flex h-full w-full flex-col items-center justify-center gap-2.5 rounded-xl border shadow-lg"
+  class="inline-flex h-full w-full flex-col items-center justify-center gap-2.5 rounded-xl border border-mauve-300 shadow-lg"
 >
   <h3>{title}</h3>
   <div class="flex w-full justify-evenly">
-    {#await getContext("stats")}
+    {#await promise}
       <div class="m-2.5 h-1/3 bg-slate-300"></div>
     {:then stats}
       {#each stats as stat}
