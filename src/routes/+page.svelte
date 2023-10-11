@@ -20,6 +20,6 @@
   <Projets />
   <Sports />
   <Hobbies />
-  <Experiences />
   <Education />
+  <Experiences />
 </div>

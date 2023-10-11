@@ -2,8 +2,19 @@
   import TimelineSection from "$lib/component/TimelineSection.svelte";
   import Filboost from "$lib/contents/en/experiences/Filboost.svelte";
   import PLDAC from "$lib/contents/en/experiences/PLDAC.svelte";
+  import Freelance from "$lib/contents/en/experiences/Freelance.svelte";
+  import SUAPS from "$lib/contents/en/experiences/SUAPS.svelte";
+  import TER_MIASHS from "$lib/contents/en/experiences/TER_MIASHS.svelte";
+  import Temporary from "$lib/contents/en/experiences/Temporary.svelte";
+  import Stage_L2 from "$lib/contents/en/experiences/Stage_L2.svelte";
 
   const timelines = [
+    {
+      title: "Freelance - Frontend web developpement",
+      date: "Summer 2023",
+      type_place: "Paris",
+      textComponent: Freelance,
+    },
     {
       title: "Research project - Explainable insects classification",
       date: "01/2023 - 06/2023",
@@ -15,6 +26,30 @@
       date: "Summer 2022",
       type_place: "Filboost x SCALAB Laboratory - Lille",
       textComponent: Filboost,
+    },
+    {
+      title: "Temporary - SCALab Laboratory",
+      date: "Summer 2022",
+      type_place: "Lille",
+      textComponent: SUAPS,
+    },
+    {
+      title: "Research Project - INRIA",
+      date: "Second semester 2022",
+      type_place: "Lille",
+      textComponent: TER_MIASHS,
+    },
+    {
+      title: "Temporary - SCALab Laboratory",
+      date: "First semester 2021",
+      type_place: "Lille",
+      textComponent: Temporary,
+    },
+    {
+      title: "Intership - SCALab Laboratory",
+      date: "Summer 2021",
+      type_place: "Lille",
+      textComponent: Stage_L2,
     },
   ];
 </script>
