@@ -2,6 +2,8 @@
   export let title;
   export let link;
   export let badges = [];
+
+  // Badge : dark:bg-mauve-900 dark:text-mauve-300
 </script>
 
 <a
@@ -16,7 +18,7 @@
     <div>
       {#each badges as badge_text}
         <small
-          class="mr-2 rounded-full bg-mauve-100 px-2.5 py-0.5 text-center text-mauve-800 dark:bg-mauve-900 dark:text-mauve-300"
+          class="mr-2 rounded-full bg-mauve-100 px-2.5 py-0.5 text-center text-mauve-800 " 
         >
           {badge_text}
         </small>
