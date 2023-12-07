@@ -7,6 +7,16 @@
 <div class="inline-flex flex-col items-center gap-2">
   <div class="grid w-full auto-rows-auto gap-5">
     <ProjectCard
+      title="Paper review: ClimODE: Climate Forecasting With Physics-informed Neural ODEs, ICLR 2024"
+      badges={["CNN", "ODE"]}
+      link="https://openreview.net/forum?id=xuY33XhEGR"
+    >
+      <ul>
+        <li>Re-implementation, experimentation and review.</li>
+        <li>Creation of a poster to present the article.</li>
+      </ul>
+    </ProjectCard>
+    <ProjectCard
       title="Neural Network DIY"
       badges={["Numpy", "Mathematics", "Neural Networks"]}
       link="https://github.com/dataymeric/NeuralNetworksDIY"
