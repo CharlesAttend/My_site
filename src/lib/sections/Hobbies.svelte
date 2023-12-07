@@ -51,7 +51,7 @@
             class="underline"
             target="_blank"
             rel="noreferrer noopener"
-            href="https://www.nsc-consultante-educative.fr/"
+            href="https://nsc-consultante-educative.fr/"
             >My mom
           </a> : the origin of my passion for cooking
         </li>

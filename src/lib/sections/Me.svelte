@@ -1,29 +1,32 @@
 <script>
   import pp from "$lib/assets/pp.webp";
-  import github_icon from "$lib/assets/github_icon.svg";
+  import git_icon from "$lib/assets/git_icon.svg";
   import linkedin_icon from "$lib/assets/linkedin_icon.svg";
-  import resume_icon from "$lib/assets/resume_icon.svg";
+  // import resume_icon from "$lib/assets/resume_icon.svg";
   import envelope_icon from "$lib/assets/envelope_icon.svg";
   const link_list = [
     {
       href: "https://github.com/CharlesAttend/",
-      img: github_icon,
+      img: git_icon,
       alt: "github_icon",
       text: "CharlesAttend",
+      title: "My GitHub",
     },
     {
       href: "https://linkedin.com/in/charles-vin/",
       img: linkedin_icon,
       alt: "linkedin_icon",
       text: "Charles Vin",
+      title: "My LinkedIn",
     },
     {
       href: "mailto:charles.vin@outlook.fr",
       img: envelope_icon,
       alt: "mail_icon",
       text: "charles.vin@outlook.fr",
+      title: "My mail",
     },
-    { href: "", img: resume_icon, alt: "envelope_icon", text: "Resume" },
+    // { href: "", img: resume_icon, alt: "envelope_icon", text: "Resume" },
   ];
 </script>
 
@@ -32,10 +35,11 @@
 >
   <img class="w-2/3 max-w-sm rounded-full shadow-lg" src={pp} alt="Me" />
   <!-- <h2 class="text-center">Usefull links</h2> -->
-  <div class="grid w-full grid-cols-4 justify-items-center gap-5">
+  <div class="grid w-full grid-cols-3 justify-items-center gap-5">
     {#each link_list as link}
       <a
         href={link.href}
+        title={link.title}
         target="_blank"
         rel="noreferrer noopener"
         class="inline-flex items-center rounded-lg px-4 py-2 text-mauve-900 hover:bg-mauve-100 hover:text-blue-700 focus:z-10 focus:text-blue-700 focus:outline-none focus:ring-4 focus:ring-mauve-200"
