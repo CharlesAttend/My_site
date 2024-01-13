@@ -9,7 +9,7 @@
     <ProjectCard
       title="Paper review: ClimODE: Climate Forecasting With Physics-informed Neural ODEs, ICLR 2024"
       badges={["CNN", "ODE"]}
-      link="https://openreview.net/forum?id=xuY33XhEGR"
+      link="https://github.com/dataymeric/ClimODE"
     >
       <ul>
         <li>Re-implementation, experimentation and review.</li>
