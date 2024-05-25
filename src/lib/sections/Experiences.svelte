@@ -54,7 +54,7 @@
   ];
 </script>
 
-<div class="w-full sm:max-w-xl">
+<div class="w-full sm:max-w-2xl">
   <h2 class="text-center">Experiences</h2>
   <ol class="relative m-2.5 border-l border-mauve dark:border-gray-700">
     {#each timelines as timeline}
