@@ -7,8 +7,15 @@
   import TER_MIASHS from "$lib/contents/en/experiences/TER_MIASHS.svelte";
   import Temporary from "$lib/contents/en/experiences/Temporary.svelte";
   import Stage_L2 from "$lib/contents/en/experiences/Stage_L2.svelte";
+  import Stage_CNAM from "$lib/contents/en/experiences/Stage_CNAM.svelte";
 
   const timelines = [
+    {
+      title: "Research Internship - Self-supervised Learning on Satellite Image Time Series",
+      date: "03/2024 - 09/2024",
+      type_place: "Conservatoire national des arts et métiers (CNAM) - Paris",
+      textComponent: Stage_CNAM,
+    },
     {
       title: "Freelance - Frontend web developpement",
       date: "Summer 2023",
@@ -22,7 +29,7 @@
       textComponent: PLDAC,
     },
     {
-      title: "Intership - Signal Processing and Data Analysis Internship",
+      title: "Intership - Signal Processing and Data Analysis",
       date: "Summer 2022",
       type_place: "Filboost x SCALAB Laboratory - Lille",
       textComponent: Filboost,
