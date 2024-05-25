@@ -47,7 +47,8 @@
       id="animate-border"
     >
       <h1>Charles Vin</h1>
-      <p>Interactive Resume & Portfolio</p>
+      <p>Junior Research Engineer</p>
+      <!-- <p>Interactive Resume & Portfolio</p> -->
     </div>
   </div>
 </div>
