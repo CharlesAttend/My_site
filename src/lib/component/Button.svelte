@@ -12,7 +12,7 @@
   href={link}
   target="_blank"
   rel="noreferrer noopener"
-  class="inline-flex items-center rounded-lg border border-mauve-200 px-4 py-2 text-text hover:bg-mauve-100 hover:text-mauve-800 focus:z-10 focus:text-mauve-800 focus:outline-none focus:ring-4 focus:ring-mauve-200"
+  class="my-2.5 inline-flex items-center rounded-lg border border-mauve-200 px-4 py-2 text-text hover:bg-mauve-100 hover:text-mauve-800 focus:z-10 focus:text-mauve-800 focus:outline-none focus:ring-4 focus:ring-mauve-200"
 >
   <small>{text}</small>
   {#if arrow}
