@@ -7,15 +7,20 @@
 <div class="inline-flex flex-col items-center gap-2 sm:max-w-4xl">
   <div class="grid w-full auto-rows-auto gap-5">
     <ProjectCard
-      title="Paper review: ClimODE: Climate Forecasting With Physics-informed Neural ODEs, ICLR 2024"
-      badges={["PyTorch", "Research", "CNN", "ODE"]}
+      title="Paper re-implementation: ClimODE: Climate Forecasting With Physics-informed Neural ODEs, ICLR 2024"
+      badges={["PyTorch", "Torch Ignite", "CNN", "ViT", "ODE"]}
       link="https://github.com/dataymeric/ClimODE"
     >
       <ul>
         <li>Re-implementation, experimentation and review.</li>
-        <li>Creation of a poster to present the article.</li>
+        <li>Creation of a poster to present the article and our supplementary experiments.</li>
         <li>
-          Enhanced key features like distributed training and code readability
+          Enhanced key features like distributed training and code readability.
+        </li>
+        <li>
+          Employed collaborative tools like Notion, GitHub pre-commit hooks and
+          EditorConfig to foster effective collaboration and maintain codebase
+          cleanliness.
         </li>
       </ul>
     </ProjectCard>
