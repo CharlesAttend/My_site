@@ -15,8 +15,8 @@
 >
   <Me />
   <Projets />
+  <Experiences />
+  <Education />
   <Sports />
   <Hobbies />
-  <Education />
-  <Experiences />
 </div>
