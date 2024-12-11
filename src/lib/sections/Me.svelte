@@ -4,6 +4,7 @@
   import linkedin_icon from "$lib/assets/linkedin_icon.svg";
   // import resume_icon from "$lib/assets/resume_icon.svg";
   import envelope_icon from "$lib/assets/envelope_icon.svg";
+  import bsky_icon from "$lib/assets/bsky_icon.svg";
   const link_list = [
     {
       href: "https://github.com/CharlesAttend/",
@@ -11,6 +12,13 @@
       alt: "github_icon",
       text: "CharlesAttend",
       title: "My GitHub",
+    },
+    {
+      href: "https://bsky.app/profile/charles.vin",
+      img: bsky_icon,
+      alt: "bsky_icon",
+      text: "Charles Vin",
+      title: "My BlueSky profile",
     },
     {
       href: "https://linkedin.com/in/charles-vin/",
@@ -26,6 +34,7 @@
       text: "charles.vin@outlook.fr",
       title: "My mail",
     },
+    // update grid length accordingly, automatic update slow down the page
     // { href: "", img: resume_icon, alt: "envelope_icon", text: "Resume" },
   ];
 </script>
@@ -35,7 +44,7 @@
 >
   <img class="w-2/3 max-w-sm rounded-full shadow-lg" src={pp} alt="Me" />
   <!-- <h2 class="text-center">Usefull links</h2> -->
-  <div class="grid w-full grid-cols-3 justify-items-center gap-5">
+  <div class="grid w-full grid-cols-4 justify-items-center gap-5">
     {#each link_list as link}
       <a
         href={link.href}
