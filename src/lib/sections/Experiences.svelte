@@ -82,7 +82,7 @@
 
 <div class="w-full sm:max-w-2xl">
   <h2 class="text-center">Experiences</h2>
-  <div class="flex flex-wrap justify-center text-xs">
+  <div class="flex flex-wrap justify-center text-xs m-2.5">
     <span class="mr-2">Filter by roles: </span>
     {#each filters_text as filters_text}
       <button
