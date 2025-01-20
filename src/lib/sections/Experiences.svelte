@@ -1,6 +1,6 @@
 <script>
   import TimelineSection from "$lib/component/TimelineSection.svelte";
-  
+
   import Filboost from "$lib/contents/en/experiences/Filboost.svelte";
   import PLDAC from "$lib/contents/en/experiences/PLDAC.svelte";
   import Freelance from "$lib/contents/en/experiences/Freelance.svelte";
@@ -16,12 +16,13 @@
     "Research",
     "Data Analyst",
     "Web",
-  ]
+  ];
   let selected_filter = "Any";
 
   const timelines = [
     {
-      title: "Research Internship - Self-supervised Learning on Satellite Image Time Series",
+      title:
+        "Research Internship - Self-supervised Learning on Satellite Image Time Series",
       date: "03/2024 - 09/2024",
       type_place: "Conservatoire national des arts et métiers (CNAM) - Paris",
       textComponent: Stage_CNAM,
@@ -68,7 +69,6 @@
       type_place: "Lille",
       textComponent: Temporary,
       filters: ["Data Analyst"],
-      
     },
     {
       title: "Intership - SCALab Laboratory",
@@ -82,22 +82,29 @@
 
 <div class="w-full sm:max-w-2xl">
   <h2 class="text-center">Experiences</h2>
-  <div class="flex flex-wrap justify-center text-xs m-2.5">
-    <span class="mr-2">Filter by roles: </span>
+  <div class="m-2.5 flex flex-wrap items-baseline justify-center text-xs">
+    <span class="mr-2 text-center">Filter by roles: </span>
     {#each filters_text as filters_text}
       <button
-        class="{selected_filter==filters_text ? "bg-mauve-100 text-mauve-800": "text-text"} mr-2 rounded-full px-2.5 py-0.5 text-center border border-mauve-200 hover:bg-mauve-100 hover:text-mauve-800 focus:z-10 focus:text-mauve-800 focus:outline-none focus:ring-4 focus:ring-mauve-200"
-        on:click={() => selected_filter = filters_text}
+        class="{selected_filter == filters_text
+          ? 'border-[0.5px] border-mauve bg-mauve-100 text-mauve-800'
+          : 'text-text'} mb-2 mr-2 rounded-full border border-mauve-200 px-2.5 py-0.5 text-center hover:bg-mauve-100 hover:text-mauve-800 focus:z-10"
+        on:click={() => (selected_filter = filters_text)}
       >
         {filters_text}
       </button>
     {/each}
   </div>
-  <ol class="relative m-2.5 border-l border-mauve dark:border-gray-700">
-    {#each timelines as timeline}
-      {#if selected_filter=="Any" || timeline.filters.includes(selected_filter)}
-        <TimelineSection {...timeline} />
-      {/if}
-    {/each}
-  </ol>
+  <div>
+    {#if selected_filter != "Any"}
+      <span class="text-xs text-mauve">Filtered</span>
+    {/if}
+    <ol class="relative m-2.5 border-l border-mauve dark:border-gray-700">
+      {#each timelines as timeline}
+        {#if selected_filter == "Any" || timeline.filters.includes(selected_filter)}
+          <TimelineSection {...timeline} />
+        {/if}
+      {/each}
+    </ol>
+  </div>
 </div>
