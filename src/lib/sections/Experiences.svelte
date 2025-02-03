@@ -18,7 +18,7 @@
     "Web",
     "Cognitive Science",
   ];
-  let selected_filter = "Any";
+  let selected_filter = "ML Engineer";
 
   const timelines = [
     {
