@@ -16,6 +16,7 @@
     "Research",
     "Data Analyst",
     "Web",
+    "Cognitive Science",
   ];
   let selected_filter = "Any";
 
@@ -40,42 +41,42 @@
       date: "01/2023 - 06/2023",
       type_place: "Sorbonne University - Paris",
       textComponent: PLDAC,
-      filters: ["Data Science", "Research"],
+      filters: ["ML Engineer", "Data Science", "Research"],
     },
     {
       title: "Intership - Signal Processing and Data Analysis",
       date: "Summer 2022",
       type_place: "Filboost x SCALAB Laboratory - Lille",
       textComponent: Filboost,
-      filters: ["Data Analyst"],
+      filters: ["Data Analyst", "Cognitive Science"],
     },
     {
       title: "Temporary - SCALab Laboratory",
       date: "Summer 2022",
       type_place: "Lille",
       textComponent: SUAPS,
-      filters: ["Data Science"],
+      filters: ["Data Science", "Cognitive Science"],
     },
     {
       title: "Research Project - INRIA",
       date: "Second semester 2022",
       type_place: "Lille",
       textComponent: TER_MIASHS,
-      filters: ["Data Science", "Research"],
+      filters: ["ML Engineer", "Data Science", "Research"],
     },
     {
       title: "Temporary - SCALab Laboratory",
       date: "First semester 2021",
       type_place: "Lille",
       textComponent: Temporary,
-      filters: ["Data Analyst"],
+      filters: ["Data Analyst", "Cognitive Science"],
     },
     {
       title: "Intership - SCALab Laboratory",
       date: "Summer 2021",
       type_place: "Lille",
       textComponent: Stage_L2,
-      filters: ["Data Analyst"],
+      filters: ["Data Analyst", "Cognitive Science"],
     },
   ];
 </script>
