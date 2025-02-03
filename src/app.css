@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  strong {
+    @apply text-mauve font-normal;
+  }
   ul {
     @apply list-inside list-disc;
   }

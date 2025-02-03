@@ -13,14 +13,20 @@
     >
       <ul>
         <li>Re-implementation, experimentation and review.</li>
-        <li>Creation of a poster to present the article and our supplementary experiments.</li>
         <li>
-          Enhanced key features like distributed training and code readability.
+          Creation of a poster to present the article and our supplementary
+          experiments.
         </li>
         <li>
-          Employed collaborative tools like Notion, GitHub pre-commit hooks and
-          EditorConfig to foster effective collaboration and maintain codebase
-          cleanliness.
+          Enhanced key features like <strong>distributed training</strong> and
+          <strong>code readability</strong>.
+        </li>
+        <li>
+          Employed collaborative tools like <a
+            href="https://charlesattend.notion.site/ClimODE-Notion-beb1e205faea4964b6f96b87c1af27e2?pvs=4"
+            >Notion</a
+          >, GitHub pre-commit hooks and EditorConfig to foster
+          <strong>effective collaboration</strong> and maintain codebase cleanliness.
         </li>
       </ul>
     </ProjectCard>
@@ -30,14 +36,18 @@
       link="https://github.com/dataymeric/NeuralNetworksDIY"
     >
       <ul>
-        <li>Development of a neural network library entirely in Numpy</li>
+        <li>
+          Development of a neural network library <strong
+            >entirely in Numpy</strong
+          >
+        </li>
         <li>
           Implementation of essential modules (linear layers, 1D convolutions,
           etc.) for creating, training and evaluating neural networks.
         </li>
         <li>
-          Performance optimization through advanced use of Numpy for efficient
-          computation
+          <strong>Performance optimization</strong> through advanced use of Numpy
+          for efficient computation
         </li>
       </ul>
     </ProjectCard>
