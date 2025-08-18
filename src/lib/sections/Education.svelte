@@ -7,7 +7,7 @@
     {
       title:
         "Master's Degree in Computer Science - Specialisation Data, Machine Learning, and Knowledge (DAC)",
-      date: "2023 - 2024",
+      date: "2022 - 2024",
       type_place: "Sorbonne University",
       textComponent: DAC,
       href: "https://dac.lip6.fr/master/description/enseignement-acc/",
