@@ -9,6 +9,7 @@
   import Temporary from "$lib/contents/en/experiences/Temporary.svelte";
   import Stage_L2 from "$lib/contents/en/experiences/Stage_L2.svelte";
   import Stage_CNAM from "$lib/contents/en/experiences/Stage_CNAM.svelte";
+  import INA from "$lib/contents/en/experiences/INA.svelte";
   const filters_text = [
     "Any",
     "ML Engineer",
@@ -21,6 +22,14 @@
   let selected_filter = "ML Engineer";
 
   const timelines = [
+    {
+      title:
+        "ML Engineer - National Audiovisual Institute (INA)",
+      date: "04/2025 - Present",
+      type_place: "Bry-sur-Marne",
+      textComponent: INA,
+      filters: ["ML Engineer", "Web", "Data Science"],
+    },
     {
       title:
         "Research Internship - Self-supervised Learning on Satellite Image Time Series",
