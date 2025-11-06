@@ -47,7 +47,7 @@
       id="animate-border"
     >
       <h1>Charles Vin</h1>
-      <p>ML Engineer | Data Engineer</p>
+      <p>Freelance ML Engineer</p>
       <!-- <p>Interactive Resume & Portfolio</p> -->
     </div>
   </div>
