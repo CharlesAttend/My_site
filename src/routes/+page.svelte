@@ -5,7 +5,6 @@
   import Experiences from "$lib/sections/Experiences.svelte";
   import Projets from "$lib/sections/Projects.svelte";
   import Sports from "$lib/sections/Sports.svelte";
-  import { setContext } from "svelte";
   import Hobbies from "$lib/sections/Hobbies.svelte";
 </script>
 
