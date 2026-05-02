@@ -1,41 +1,35 @@
-<script lang="ts">
+<script>
   import { onMount } from "svelte";
-  import { loadSlim } from "tsparticles-slim";
   import particlesConfig from "$lib/assets/particlesConfig";
 
   let ParticlesComponent;
-  onMount(async () => {
-    const module = await import("svelte-particles");
 
-    ParticlesComponent = module.default;
+  onMount(async () => {
+    const [{ default: SvelteParticles, particlesInit }, { loadSlim }] =
+      await Promise.all([import("@tsparticles/svelte"), import("@tsparticles/slim")])
+
+    await particlesInit(async (engine) => {
+      await loadSlim(engine);
+    });
+
+    ParticlesComponent = SvelteParticles;
   });
 
-  let onParticlesLoaded = (event) => {
+  const onParticlesLoaded = (event) => {
     const particlesContainer = event.detail.particles;
-
-    // you can use particlesContainer to call all the Container class
-    // (from the core library) methods like play, pause, refresh, start, stop
-  };
-
-  let particlesInit = async (engine) => {
-    // you can use main to customize the tsParticles instance adding presets or custom shapes
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    //await loadFull(main);
-    await loadSlim(engine);
   };
 </script>
 
 <div class="relative h-screen w-full bg-base">
-  <svelte:component
-    this={ParticlesComponent}
-    id="tsparticles"
-    class="h-full w-full"
-    style=""
-    options={particlesConfig}
-    on:particlesLoaded={onParticlesLoaded}
-    {particlesInit}
-  />
+  {#if ParticlesComponent}
+    <svelte:component
+      this={ParticlesComponent}
+      id="tsparticles"
+      class="h-full w-full"
+      options={particlesConfig}
+      on:particlesLoaded={onParticlesLoaded}
+    />
+  {/if}
 </div>
 
 <div
